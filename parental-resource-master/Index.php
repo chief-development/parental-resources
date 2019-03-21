@@ -72,7 +72,7 @@ if($section == "askanything") {
         ?>
     
         <h3>Ask Us Anything</h3>
-        <p>Send us your question about anything you want to know and we will do our best to provide helpful answer.</p>
+        <p>Send us your question about anything you want to know and we will do our best to provide a helpful answer.</p>
         <hr />
 
         <?php
