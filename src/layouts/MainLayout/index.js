@@ -11,11 +11,10 @@ import Divider from "@material-ui/core/Divider";
 import HomeIcon from "@material-ui/icons/HomeTwoTone";
 import HelpIcon from "@material-ui/icons/HelpOutlineTwoTone";
 import PeopleIcon from "@material-ui/icons/PeopleTwoTone";
-import AskIcon from "@material-ui/icons/EditTwoTone"
+import AskIcon from "@material-ui/icons/EditTwoTone";
 import NavLink from "./NavLink";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-
 
 // https://material-ui.com/demos/drawers/#full-height-navigation
 const drawerWidth = 240;
@@ -49,14 +48,14 @@ function MainLayout(props) {
   return (
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar>    
-        <IconButton
+        <Toolbar>
+          <IconButton
             className={classes.menuButton}
             color="inherit"
             aria-label="Menu"
           >
             <MenuIcon />
-            </IconButton>
+          </IconButton>
           <Typography variant="h6" color="inherit" noWrap>
             Parental Resource Center
           </Typography>
@@ -81,6 +80,9 @@ function MainLayout(props) {
           </NavLink>
           <NavLink to="/staff" icon={PeopleIcon}>
             Staff
+          </NavLink>
+          <NavLink to="/handbook" icon={HelpIcon}>
+            Handbooks
           </NavLink>
           <NavLink to="/faq" icon={HelpIcon}>
             FAQ
