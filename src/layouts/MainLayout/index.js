@@ -81,6 +81,9 @@ function MainLayout(props) {
           <NavLink to="/staff" icon={PeopleIcon}>
             Staff
           </NavLink>
+          <NavLink to="/handbook" icon={HelpIcon}>
+            Handbooks
+          </NavLink>
           <NavLink to="/faq" icon={HelpIcon}>
             FAQ
           </NavLink>
