@@ -31,10 +31,3 @@
     transform: rotate(360deg);
   }
 }
-
-h1 {
-  color: palevioletred;
-  background-color: palegreen;
-  justify-content: center;
-  text-align: center;
-}

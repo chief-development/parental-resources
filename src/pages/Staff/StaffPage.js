@@ -1,39 +1,129 @@
 import React from "react";
-
-const sports = [""];
+import { men, women, coed, otherStaff } from "./links";
+import ExpansionPanel from "@material-ui/core/ExpansionPanel";
+import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
+import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
+import Typography from "@material-ui/core/Typography";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 export default function StaffPage() {
   return (
     <>
-      <h1> Men's Sports</h1>
-      <ul>
-        <li>
-          <a
-            href="https://lindenwoodlions.com/sports/2014/7/21/MSWIM_0721142822.aspx"
-            target="__blank"
+      <ExpansionPanel>
+        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography
+            style={{
+              fontFamily: "lato",
+              fontSize: "25px"
+            }}
           >
-            Swimming and Diving
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://lindenwoodlions.com/sports/2014/7/11/BB_0711141948.aspx"
-            target="__blank"
-          >
-            Baseball
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://lindenwoodlions.com/sports/2014/6/19/MBB_0619143018.aspx"
-            target="__blank"
-          >
-            Baseketball
-          </a>
-        </li>
-      </ul>
+            {" "}
+            Men's Sports
+          </Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>
+            <ul>
+              {men.map((link, index) => {
+                return (
+                  <li key={index}>
+                    <a href={link.href} target="__blank">
+                      {link.text}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
 
-      <h1> Women's Sports</h1>
+      <ExpansionPanel>
+        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography
+            style={{
+              fontFamily: "lato",
+              fontSize: "25px"
+            }}
+          >
+            {" "}
+            Women's Sports
+          </Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>
+            <ul>
+              {women.map((link, index) => {
+                return (
+                  <li key={index}>
+                    <a href={link.href} target="__blank">
+                      {link.text}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+
+      <ExpansionPanel>
+        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography
+            style={{
+              fontFamily: "lato",
+              fontSize: "25px"
+            }}
+          >
+            {" "}
+            Co-ed Sports
+          </Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>
+            <ul>
+              {coed.map((link, index) => {
+                return (
+                  <li key={index}>
+                    <a href={link.href} target="__blank">
+                      {link.text}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+
+      <ExpansionPanel>
+        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography
+            style={{
+              fontFamily: "lato",
+              fontSize: "25px"
+            }}
+          >
+            {" "}
+            More Staff
+          </Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>
+            <ul>
+              {otherStaff.map((link, index) => {
+                return (
+                  <li key={index}>
+                    <a href={link.href} target="__blank">
+                      {link.text}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
     </>
   );
 }
