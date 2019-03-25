@@ -13,7 +13,6 @@ export default function StaffPage() {
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <Typography
             style={{
-              fontFamily: "lato",
               fontSize: "25px"
             }}
           >
@@ -42,7 +41,6 @@ export default function StaffPage() {
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <Typography
             style={{
-              fontFamily: "lato",
               fontSize: "25px"
             }}
           >
@@ -71,7 +69,6 @@ export default function StaffPage() {
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <Typography
             style={{
-              fontFamily: "lato",
               fontSize: "25px"
             }}
           >
@@ -100,7 +97,6 @@ export default function StaffPage() {
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <Typography
             style={{
-              fontFamily: "lato",
               fontSize: "25px"
             }}
           >
