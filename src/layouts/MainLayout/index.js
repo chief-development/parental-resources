@@ -15,7 +15,8 @@ import AskIcon from "@material-ui/icons/EditTwoTone";
 import NavLink from "./NavLink";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-
+import HandbookIcon from "@material-ui/icons/DescriptionTwoTone"
+import AthleticsIcon from "@material-ui/icons/DirectionsBikeTwoTone"
 // https://material-ui.com/demos/drawers/#full-height-navigation
 const drawerWidth = 240;
 
@@ -29,7 +30,8 @@ const styles = theme => ({
   },
   drawer: {
     width: drawerWidth,
-    flexShrink: 0
+    flexShrink: 0,
+    color: 'gold'
   },
   drawerPaper: {
     width: drawerWidth
@@ -75,13 +77,13 @@ function MainLayout(props) {
           <NavLink activeOnlyWhenExact to="/homepage" icon={HomeIcon}>
             Parental Resource Center
           </NavLink>
-          <NavLink to="/athletics" icon={HelpIcon}>
+          <NavLink to="/athletics" icon={AthleticsIcon}>
             Lindenwood Athletics
           </NavLink>
           <NavLink to="/staff" icon={PeopleIcon}>
             Staff
           </NavLink>
-          <NavLink to="/handbook" icon={HelpIcon}>
+          <NavLink to="/handbook" icon={HandbookIcon}>
             Handbooks
           </NavLink>
           <NavLink to="/faq" icon={HelpIcon}>
