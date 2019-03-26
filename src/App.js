@@ -8,6 +8,7 @@ import AskAnything from "./pages/AskAnything/AskAnything";
 import Handbook from "./pages/Handbook/Handbook";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
+import { men } from "./pages/Staff/links";
 
 function App() {
   return (
