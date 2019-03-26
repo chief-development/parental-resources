@@ -9,7 +9,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 export default function StaffPage() {
   return (
     <>
-      <ExpansionPanel>
+      <ExpansionPanel style={{ padding: '2px', margin: '10px' }}>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <Typography
             style={{
@@ -21,7 +21,7 @@ export default function StaffPage() {
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography>
+          <Typography style={{ fontSize: '18px' }}>
             <ul>
               {men.map((link, index) => {
                 return (
@@ -37,7 +37,7 @@ export default function StaffPage() {
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
-      <ExpansionPanel>
+      <ExpansionPanel style={{ padding: '2px', margin: '10px' }}>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <Typography
             style={{
@@ -49,7 +49,7 @@ export default function StaffPage() {
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography>
+          <Typography style={{ fontSize: '18px' }}>
             <ul>
               {women.map((link, index) => {
                 return (
@@ -63,9 +63,9 @@ export default function StaffPage() {
             </ul>
           </Typography>
         </ExpansionPanelDetails>
-      </ExpansionPanel>
+      </ExpansionPanel >
 
-      <ExpansionPanel>
+      <ExpansionPanel style={{ padding: '2px', margin: '10px' }}>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <Typography
             style={{
@@ -77,7 +77,7 @@ export default function StaffPage() {
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography>
+          <Typography style={{ fontSize: '18px' }}>
             <ul>
               {coed.map((link, index) => {
                 return (
@@ -93,7 +93,7 @@ export default function StaffPage() {
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
-      <ExpansionPanel>
+      <ExpansionPanel style={{ padding: '2px', margin: '10px' }}>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <Typography
             style={{
@@ -105,7 +105,7 @@ export default function StaffPage() {
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography>
+          <Typography style={{ fontSize: '18px' }}>
             <ul>
               {otherStaff.map((link, index) => {
                 return (
