@@ -7,12 +7,12 @@ import StaffPage from "./pages/Staff/StaffPage";
 import AskAnything from "./pages/AskAnything/AskAnything";
 import Handbook from "./pages/Handbook/Handbook";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import MainLayout from "./layouts/MainLayout";
+import Dashboard from "./layouts/MainLayout";
 
 function App() {
   return (
     <Router>
-      <MainLayout>
+      <Dashboard>
         <Switch>
           <Route path="/homepage" exact component={HomePage} />
           <Route path="/athletics" component={LuAthletics} />
@@ -21,7 +21,7 @@ function App() {
           <Route path="/faq" component={FAQ} />
           <Route path="/ask" component={AskAnything} />
         </Switch>
-      </MainLayout>
+      </Dashboard>
     </Router>
   );
 }
