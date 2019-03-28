@@ -21,6 +21,7 @@ import PeopleIcon from "@material-ui/icons/PeopleTwoTone";
 import AskIcon from "@material-ui/icons/EditTwoTone";
 import HandbookIcon from "@material-ui/icons/DescriptionTwoTone";
 import AthleticsIcon from "@material-ui/icons/DirectionsBikeTwoTone";
+
 const drawerWidth = 250;
 
 const styles = theme => ({
@@ -42,7 +43,8 @@ const styles = theme => ({
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen
-    })
+    }),
+    backgroundColor: "#FBB904"
   },
   appBarShift: {
     marginLeft: drawerWidth,
@@ -82,7 +84,7 @@ const styles = theme => ({
       width: theme.spacing.unit * 9
     }
   },
-  toolbar: theme.mixins.toolbar,
+  appBarSpacer: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
     padding: theme.spacing.unit * 3,
@@ -111,7 +113,7 @@ class Dashboard extends React.Component {
 
     const sideList = (
       <List>
-        <NavLink activeOnlyWhenExact to="/homepage" icon={HomeIcon}>
+        <NavLink activeOnlyWhenExact to="/" icon={HomeIcon}>
           Parental Resource Center
         </NavLink>
         <NavLink to="/athletics" icon={AthleticsIcon}>
@@ -134,6 +136,7 @@ class Dashboard extends React.Component {
 
     return (
       <div className={classes.root}>
+        <div />
         <CssBaseline />
         <AppBar
           position="absolute"
@@ -188,7 +191,7 @@ class Dashboard extends React.Component {
           <Divider />
         </Drawer>
         <main className={classes.content}>
-          <div className={classes.toolbar} />
+          <div className={classes.appBarSpacer} />
           {children}
         </main>
       </div>

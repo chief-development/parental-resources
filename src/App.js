@@ -11,18 +11,20 @@ import Dashboard from "./layouts/MainLayout";
 
 function App() {
   return (
-    <Router>
-      <Dashboard>
-        <Switch>
-          <Route path="/homepage" exact component={HomePage} />
-          <Route path="/athletics" component={LuAthletics} />
-          <Route path="/staff" component={StaffPage} />
-          <Route path="/handbook" component={Handbook} />
-          <Route path="/faq" component={FAQ} />
-          <Route path="/ask" component={AskAnything} />
-        </Switch>
-      </Dashboard>
-    </Router>
+    <>
+      <Router>
+        <Dashboard>
+          <Switch>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/athletics" component={LuAthletics} />
+            <Route path="/staff" component={StaffPage} />
+            <Route path="/handbook" component={Handbook} />
+            <Route path="/faq" component={FAQ} />
+            <Route path="/ask" component={AskAnything} />
+          </Switch>
+        </Dashboard>
+      </Router>
+    </>
   );
 }
 export default App;
