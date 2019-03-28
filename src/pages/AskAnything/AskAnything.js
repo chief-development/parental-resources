@@ -100,6 +100,16 @@ export default function AskAnything() {
         </RadioGroup>
       </FormControl>
 
+      <TextField
+        id="filled-multiline-flexible"
+        label="Question"
+        multiline
+        rowsMax="4"
+        margin="normal"
+        variant="outlined"
+        style={{ position: 'absolute', top: '120%', left: '50%' }}
+      />
+
     </div >
   );
 }
