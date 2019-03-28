@@ -96,13 +96,6 @@ export default function AskAnything() {
           placeholder="Your last name.."
         />
 
-        <TextField
-          id="uEmail"
-          label="E-mail"
-          variant="outlined"
-          style={{ position: "absolute", top: "45%", left: "60%" }}
-        />
-
         <label>Email</label>
         <input type="email" id="email" name="email" placeholder="Your email" />
 
