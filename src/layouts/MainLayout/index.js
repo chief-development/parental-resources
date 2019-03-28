@@ -111,7 +111,7 @@ class Dashboard extends React.Component {
 
     const sideList = (
       <List>
-        <NavLink activeOnlyWhenExact to="/homepage" icon={HomeIcon}>
+        <NavLink activeOnlyWhenExact to="/" icon={HomeIcon}>
           Parental Resource Center
         </NavLink>
         <NavLink to="/athletics" icon={AthleticsIcon}>
