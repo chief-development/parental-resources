@@ -1,14 +1,55 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
-import Radio from "@material-ui/core/Radio";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormControl from "@material-ui/core/FormControl";
-import FormLabel from "@material-ui/core/FormLabel";
-import RadioGroup from "@material-ui/core/RadioGroup";
+import "./ask.css";
+import MenuItem from "@material-ui/core/MenuItem";
+
+const categories = [
+  {
+    value: "AS",
+    label: "Academic Success"
+  },
+  {
+    value: "AC",
+    label: "Athletic Communication"
+  },
+  {
+    value: "AP",
+    label: "Athletic Performance"
+  },
+  {
+    value: "AT",
+    label: "Athletic Training"
+  },
+  {
+    value: "CM",
+    label: "IC. NCAA Compliance"
+  },
+  {
+    value: "GE",
+    label: "GameDay, Events and Operations"
+  },
+  {
+    value: "NR",
+    label: "NCAA Rules"
+  },
+  {
+    value: "other",
+    label: "Other"
+  }
+];
+
 export default function AskAnything() {
+  const [values, setValues] = React.useState({
+    categories: "AS"
+  });
+
+  const handleChange = name => event => {
+    setValues({ ...values, [name]: event.target.value });
+  };
+
   return (
-    <div>
-      <br />
+    <div className="askForm">
       <h3
         style={{
           textAlign: "center",
@@ -23,112 +64,86 @@ export default function AskAnything() {
         style={{
           textAlign: "center",
           fontStretch: "1px",
-          fontSize: "25px"
+          fontSize: "25px",
+          color: "#FBB904"
         }}
       >
-        If you have any questions, feel free to get in touch!
+        If you have any questions, feel free to get in touch with us!
       </h4>
 
-      <br />
       <hr
         style={{ backgroundColor: "#FBB904", borderTop: "px double #FBB904" }}
       />
-
-      <br />
 
       <p style={{ fontSize: "18px", textAlign: "center" }}>
         {" "}
         Please provide the information requested
       </p>
 
-      <TextField
-        id="uName"
-        label="Name"
-        variant="outlined"
-        style={{ position: "absolute", top: "45%", left: "40%" }}
-      />
+      <form>
+        <label>First Name</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Your name.."
+        />
+        <label>Last Name</label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Your last name.."
+        />
 
-      <TextField
-        id="uEmail"
-        label="E-mail"
-        variant="outlined"
-        style={{ position: "absolute", top: "45%", left: "60%" }}
-      />
+        <TextField
+          id="uEmail"
+          label="E-mail"
+          variant="outlined"
+          style={{ position: "absolute", top: "45%", left: "60%" }}
+        />
 
-      <FormControl
-        component="fieldset"
-        style={{ position: "absolute", top: "59%", left: "50%" }}
-      >
-        <FormLabel component="legend">Choose your category</FormLabel>
-        <RadioGroup aria-label="Category">
-          <FormControlLabel
-            value="aSuccess"
-            control={<Radio color="primary" />}
-            label="Academic Success"
-            labelPlacement="start"
-            style={{ fontSize: "20px" }}
-          />
+        <label>Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" />
 
-          <FormControlLabel
-            value="aCommunication"
-            control={<Radio color="primary" />}
-            label="Athletic Communication"
-            labelPlacement="start"
-          />
+        <TextField
+          id="category"
+          select
+          label="Select"
+          value={values.categories}
+          onChange={handleChange("categories")}
+          helperText="Please select a category"
+          margin="normal"
+          variant="outlined"
+        >
+          {categories.map(option => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
 
-          <FormControlLabel
-            value="aPerfomance"
-            control={<Radio color="primary" />}
-            label="Athletic Performance"
-            labelPlacement="start"
-          />
+        <br />
 
-          <FormControlLabel
-            value="aTraining"
-            control={<Radio color="primary" />}
-            label="Athletic Training"
-            labelPlacement="start"
-          />
+        <label>Question</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." />
 
-          <FormControlLabel
-            value="compliance"
-            control={<Radio color="primary" />}
-            label="IC. NCAA Compliance"
-            labelPlacement="start"
-          />
+        <br />
+        <Button
+          variant="outlined"
+          color="black"
+          style={{
+            position: "relative",
+            left: "50%",
+            width: "90px",
+            height: "50px"
+          }}
+        >
+          Submit
+        </Button>
 
-          <FormControlLabel
-            value="Events"
-            control={<Radio color="primary" />}
-            label="IGameday Events and Operations"
-            labelPlacement="start"
-          />
-
-          <FormControlLabel
-            value="nRules"
-            control={<Radio color="primary" />}
-            label="NCAA Rules"
-            labelPlacement="start"
-          />
-
-          <FormControlLabel
-            value="other"
-            control={<Radio color="primary" />}
-            label="Other"
-            labelPlacement="start"
-          />
-        </RadioGroup>
-      </FormControl>
-
-      <TextField
-        id="filled-multiline-flexible"
-        label="Question"
-        multiline
-        rowsMax="4"
-        margin="normal"
-        variant="outlined"
-        style={{ position: "absolute", top: "120%", left: "50%" }}
-      />
+        <br />
+      </form>
     </div>
   );
 }
