@@ -21,12 +21,15 @@ import PeopleIcon from "@material-ui/icons/PeopleTwoTone";
 import AskIcon from "@material-ui/icons/EditTwoTone";
 import HandbookIcon from "@material-ui/icons/DescriptionTwoTone";
 import AthleticsIcon from "@material-ui/icons/DirectionsBikeTwoTone";
+import { Visibility } from "semantic-ui-react";
+import logo from "./LU_RERS.png";
 
 const drawerWidth = 250;
 
 const styles = theme => ({
   root: {
-    display: "flex"
+    display: "flex",
+    backgroundColor: "#F5F5F5"
   },
   toolbar: {
     paddingRight: 24 // keep right padding when drawer closed
@@ -44,7 +47,7 @@ const styles = theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen
     }),
-    backgroundColor: "#FBB904"
+    backgroundColor: "#b6a16b"
   },
   appBarShift: {
     marginLeft: drawerWidth,
@@ -56,7 +59,9 @@ const styles = theme => ({
   },
   menuButton: {
     marginLeft: 12,
-    marginRight: 36
+    marginRight: 36,
+    backgroundColor: "black",
+    opacity: 0.5
   },
   menuButtonHidden: {
     display: "none"
@@ -71,7 +76,9 @@ const styles = theme => ({
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen
-    })
+    }),
+    backgroundColor: "lightgrey",
+    Visibility: "transparent"
   },
   drawerPaperClose: {
     overflowX: "hidden",
@@ -163,11 +170,16 @@ class Dashboard extends React.Component {
             <Typography
               component="h1"
               variant="h6"
-              color="inherit"
+              color="inherit\"
               noWrap
               className={classes.title}
             >
-              Parental Resources
+              <img src={logo} alt="Logo" width="300" height="50" align="left" />
+
+              <h1 color="black" align="middle">
+                {" "}
+                Parental Resources{" "}
+              </h1>
             </Typography>
           </Toolbar>
         </AppBar>
