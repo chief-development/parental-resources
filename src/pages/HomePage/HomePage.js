@@ -15,7 +15,7 @@ export default function HomePage() {
           padding: "20px"
         }}
       >
-        Lindenwood University
+        Parental Resource Center
       </h1>
 
       <br />
