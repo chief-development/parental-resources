@@ -176,10 +176,7 @@ class Dashboard extends React.Component {
             >
               <img src={logo} alt="Logo" width="300" height="50" align="left" />
 
-              <h1 color="black" align="middle">
-                {" "}
-                Parental Resources{" "}
-              </h1>
+
             </Typography>
           </Toolbar>
         </AppBar>
