@@ -10,22 +10,24 @@ import List from "@material-ui/core/List";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
-import Badge from "@material-ui/core/Badge";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import NotificationsIcon from "@material-ui/icons/Notifications";
 import NavLink from "./NavLink";
 import HomeIcon from "@material-ui/icons/HomeTwoTone";
 import HelpIcon from "@material-ui/icons/HelpOutlineTwoTone";
 import PeopleIcon from "@material-ui/icons/PeopleTwoTone";
 import AskIcon from "@material-ui/icons/EditTwoTone";
+import PersonIcon from "@material-ui/icons/PersonTwoTone";
 import HandbookIcon from "@material-ui/icons/DescriptionTwoTone";
 import AthleticsIcon from "@material-ui/icons/DirectionsBikeTwoTone";
+import logo from "./LU_RERS.png";
+
 const drawerWidth = 250;
 
 const styles = theme => ({
   root: {
-    display: "flex"
+    display: "flex",
+    backgroundColor: "#F5F5F5"
   },
   toolbar: {
     paddingRight: 24 // keep right padding when drawer closed
@@ -42,7 +44,8 @@ const styles = theme => ({
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen
-    })
+    }),
+    backgroundColor: "#b6a16b"
   },
   appBarShift: {
     marginLeft: drawerWidth,
@@ -54,7 +57,9 @@ const styles = theme => ({
   },
   menuButton: {
     marginLeft: 12,
-    marginRight: 36
+    marginRight: 36,
+    backgroundColor: "black",
+    opacity: 0.5
   },
   menuButtonHidden: {
     display: "none"
@@ -69,7 +74,9 @@ const styles = theme => ({
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen
-    })
+    }),
+    backgroundColor: "lightgrey",
+    Visibility: "transparent"
   },
   drawerPaperClose: {
     overflowX: "hidden",
@@ -82,7 +89,7 @@ const styles = theme => ({
       width: theme.spacing.unit * 9
     }
   },
-  toolbar: theme.mixins.toolbar,
+  appBarSpacer: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
     padding: theme.spacing.unit * 3,
@@ -129,11 +136,16 @@ class Dashboard extends React.Component {
         <NavLink to="/ask" icon={AskIcon}>
           Ask Anything
         </NavLink>
+        <Divider />
+        <NavLink to="/admin" icon={PersonIcon}>
+          Admin
+        </NavLink>
       </List>
     );
 
     return (
       <div className={classes.root}>
+        <div />
         <CssBaseline />
         <AppBar
           position="absolute"
@@ -160,11 +172,13 @@ class Dashboard extends React.Component {
             <Typography
               component="h1"
               variant="h6"
-              color="inherit"
+              color="inherit\"
               noWrap
               className={classes.title}
             >
-              Parental Resources
+              <img src={logo} alt="Logo" width="300" height="50" align="left" />
+
+
             </Typography>
           </Toolbar>
         </AppBar>
@@ -185,10 +199,9 @@ class Dashboard extends React.Component {
           </div>
           <Divider />
           <List>{sideList}</List>
-          <Divider />
         </Drawer>
         <main className={classes.content}>
-          <div className={classes.toolbar} />
+          <div className={classes.appBarSpacer} />
           {children}
         </main>
       </div>

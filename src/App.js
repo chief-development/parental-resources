@@ -6,6 +6,7 @@ import LuAthletics from "./pages/LuAthletics/LuAthleticsPage";
 import StaffPage from "./pages/Staff/StaffPage";
 import AskAnything from "./pages/AskAnything/AskAnything";
 import Handbook from "./pages/Handbook/Handbook";
+import Admin from "./pages/Admin/LogIn";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./layouts/MainLayout";
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/handbook" component={Handbook} />
           <Route path="/faq" component={FAQ} />
           <Route path="/ask" component={AskAnything} />
+          <Route path="/admin" component={Admin} />
         </Switch>
       </Dashboard>
     </Router>
