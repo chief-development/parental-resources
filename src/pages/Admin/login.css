@@ -6,6 +6,7 @@
 }
 
 .container-login {
+  flex-direction: column;
   padding: 30px;
 }
 .logInTittle {
