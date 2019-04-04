@@ -137,7 +137,7 @@ class Dashboard extends React.Component {
           Ask Anything
         </NavLink>
         <Divider />
-        <NavLink to="/admin" icon={PersonIcon}>
+        <NavLink to="/login" icon={PersonIcon}>
           Admin
         </NavLink>
       </List>
@@ -177,8 +177,6 @@ class Dashboard extends React.Component {
               className={classes.title}
             >
               <img src={logo} alt="Logo" width="300" height="50" align="left" />
-
-
             </Typography>
           </Toolbar>
         </AppBar>

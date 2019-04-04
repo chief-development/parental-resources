@@ -67,9 +67,7 @@ export default function FAQ() {
       <h1 style={{
         fontSize: '80px', color: '#b3a272',
         lineHeight: '2',
-        letterSpacing: '-2px',
-        textShadow: '0px 2px 3px #555',
-        textAlign: 'left'
+        textAlign: 'center'
       }}>FAQs</h1>
 
       <div class="container"
