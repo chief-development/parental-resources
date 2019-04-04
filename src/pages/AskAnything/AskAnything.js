@@ -84,9 +84,10 @@ export default function AskAnything() {
     <div className="askForm">
       <h3
         style={{
+          fontSize: "65px",
           textAlign: "center",
           fontStretch: "1px",
-          fontSize: "45px"
+          color: "#b6a16b"
         }}
       >
         Contact Us
@@ -96,20 +97,19 @@ export default function AskAnything() {
         style={{
           textAlign: "center",
           fontStretch: "1px",
-          fontSize: "25px",
-          color: "#FBB904"
+          fontSize: "25px"
         }}
       >
         If you have any questions, feel free to get in touch with us!
       </h4>
 
       <hr
-        style={{ backgroundColor: "#FBB904", borderTop: "px double #FBB904" }}
+        style={{ backgroundColor: "#b6a16b", borderTop: "px double #b6a16b" }}
       />
 
       <p style={{ fontSize: "18px", textAlign: "center" }}>
         {" "}
-        Please provide the information requested
+        Please provide the information requested.
       </p>
 
       <form noValidate>
