@@ -7,6 +7,7 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import TextField from "@material-ui/core/TextField";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
+import { Link } from "react-router-dom";
 
 const styles = theme => ({
   root: {
@@ -96,19 +97,20 @@ class LogIn extends React.Component {
             }}
           />
           <br />
-          <Button
-            variant="outlined"
-            color="black"
-            style={{
-              position: "relative",
-              left: "50%",
-              width: "90px",
-              height: "50px"
-            }}
-          >
-            Submit
-          </Button>
-
+          <Link to={"/admin"}>
+            <Button
+              variant="outlined"
+              color="black"
+              style={{
+                position: "relative",
+                left: "50%",
+                width: "90px",
+                height: "50px"
+              }}
+            >
+              Submit
+            </Button>
+          </Link>
           <br />
         </form>
       </form>

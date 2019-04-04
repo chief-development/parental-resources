@@ -10,10 +10,8 @@ import List from "@material-ui/core/List";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
-import Badge from "@material-ui/core/Badge";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import NotificationsIcon from "@material-ui/icons/Notifications";
 import NavLink from "./NavLink";
 import HomeIcon from "@material-ui/icons/HomeTwoTone";
 import HelpIcon from "@material-ui/icons/HelpOutlineTwoTone";
@@ -139,7 +137,7 @@ class Dashboard extends React.Component {
           Ask Anything
         </NavLink>
         <Divider />
-        <NavLink to="/admin" icon={PersonIcon}>
+        <NavLink to="/login" icon={PersonIcon}>
           Admin
         </NavLink>
       </List>
@@ -179,8 +177,6 @@ class Dashboard extends React.Component {
               className={classes.title}
             >
               <img src={logo} alt="Logo" width="300" height="50" align="left" />
-
-
             </Typography>
           </Toolbar>
         </AppBar>
