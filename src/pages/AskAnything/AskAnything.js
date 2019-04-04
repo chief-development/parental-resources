@@ -127,7 +127,7 @@ export default function AskAnything() {
           color="black"
           style={{
             position: "relative",
-            left: "50%",
+            left: "41%",
             width: "90px",
             height: "50px"
           }}
