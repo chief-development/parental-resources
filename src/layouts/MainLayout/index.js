@@ -22,7 +22,6 @@ import AskIcon from "@material-ui/icons/EditTwoTone";
 import PersonIcon from "@material-ui/icons/PersonTwoTone";
 import HandbookIcon from "@material-ui/icons/DescriptionTwoTone";
 import AthleticsIcon from "@material-ui/icons/DirectionsBikeTwoTone";
-import { Visibility } from "semantic-ui-react";
 import logo from "./LU_RERS.png";
 
 const drawerWidth = 250;
