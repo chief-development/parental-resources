@@ -3,7 +3,7 @@ import football from "./Football.jpg";
 import random from "./Lion.jpg";
 export default function HomePage() {
   return (
-    <div className="Header">
+    <div>
       <h1
         style={{
           color: "#b6a16b",
@@ -22,8 +22,11 @@ export default function HomePage() {
 
       <p
         style={{
-          fontSize: '18px',
+          position: 'relative',
+          left: '23%',
           textAlign: 'center',
+          width: '650px',
+          fontSize: '18px',
           margin: '40px',
           padding: '10px'
         }}>
