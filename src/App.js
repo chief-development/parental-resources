@@ -9,6 +9,7 @@ import Handbook from "./pages/Handbook/Handbook";
 import Admin from "./pages/Admin/LogIn";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./layouts/MainLayout";
+import AfterSubmit from "./pages/AskAnything/AfterSubmit";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/faq" component={FAQ} />
           <Route path="/ask" component={AskAnything} />
           <Route path="/admin" component={Admin} />
+          <Route path="/submitted" component={AfterSubmit} />
         </Switch>
       </Dashboard>
     </Router>
