@@ -1,0 +1,38 @@
+.loginForm
+{
+   
+   max-width: 650px;
+   margin: 0 auto;
+}
+
+.container-login {
+  flex-direction: column;
+  padding: 30px;
+}
+.logInTittle {
+  text-align: center;
+
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 10px 0 12px 0;
+}
+img.avatar {
+  width: 55%;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.lbutton{
+  background-color: #b6a16b;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+}
