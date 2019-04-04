@@ -1,11 +1,4 @@
 import React from "react";
-
-export default function AdminPage() {
-    return (
-        <div className="Header">
-            <p>ADMIN UI</p>
-        </div>
-    );
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 import SearchIcon from "@material-ui/icons/Search";
@@ -60,7 +53,7 @@ const sorting = [
   }
 ];
 
-export default function Admin() {
+export default function NewAdmin() {
   const [values, setValues] = React.useState({
     categories: "AS",
     sorting: "mostRes"
@@ -100,7 +93,7 @@ export default function Admin() {
             Questions
           </Link>
           <Link
-            to="/newAdmin"
+            to="/login"
             style={{
               margin: "20px",
               color: "#b3a272"
@@ -118,63 +111,7 @@ export default function Admin() {
           backgroundColor: "white"
         }}
       >
-        <TextField
-          id="category"
-          select
-          label="Select"
-          value={values.categories}
-          onChange={handleChange("categories")}
-          helperText="Filter Question by Category"
-          margin="normal"
-          variant="outlined"
-          style={{ margin: "40px" }}
-        >
-          {categories.map(option => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
-
-        <TextField
-          id="sorting"
-          select
-          label="Select"
-          value={values.sorting}
-          onChange={handleChange("sorting")}
-          helperText="Sort Question by:"
-          margin="normal"
-          variant="outlined"
-          style={{ margin: "40px" }}
-        >
-          {sorting.map(option => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
-
-        <SearchIcon
-          style={{
-            color: "#b3a272",
-            position: "relative",
-            left: "4%",
-            height: "20px",
-            width: "30px"
-          }}
-        />
-        <InputBase placeholder="Search…" style={{ margin: "40px" }} />
-
-        <Button
-          variant="outlined"
-          color="black"
-          style={{
-            height: "50px",
-            margin: "40px"
-          }}
-        >
-          Go
-        </Button>
+        Hello World
       </div>
     </div>
   );
