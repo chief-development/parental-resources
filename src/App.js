@@ -8,6 +8,7 @@ import AskAnything from "./pages/AskAnything/AskAnything";
 import Handbook from "./pages/Handbook/Handbook";
 import LogIn from "./pages/Admin/LogIn";
 import Admin from "./pages/Admin/AdminPage";
+import NewAdmin from "./pages/Admin/NewAdmin";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./layouts/MainLayout";
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/ask" component={AskAnything} />
           <Route path="/login" component={LogIn} />
           <Route path="/admin" component={Admin} />
+          <Route path="/newAdmin" component={NewAdmin} />
         </Switch>
       </Dashboard>
     </Router>
