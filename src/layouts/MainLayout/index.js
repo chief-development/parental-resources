@@ -19,6 +19,7 @@ import HomeIcon from "@material-ui/icons/HomeTwoTone";
 import HelpIcon from "@material-ui/icons/HelpOutlineTwoTone";
 import PeopleIcon from "@material-ui/icons/PeopleTwoTone";
 import AskIcon from "@material-ui/icons/EditTwoTone";
+import PersonIcon from "@material-ui/icons/PersonTwoTone";
 import HandbookIcon from "@material-ui/icons/DescriptionTwoTone";
 import AthleticsIcon from "@material-ui/icons/DirectionsBikeTwoTone";
 
@@ -131,6 +132,10 @@ class Dashboard extends React.Component {
         <NavLink to="/ask" icon={AskIcon}>
           Ask Anything
         </NavLink>
+        <Divider />
+        <NavLink to="/admin" icon={PersonIcon}>
+          Admin
+        </NavLink>
       </List>
     );
 
@@ -188,7 +193,6 @@ class Dashboard extends React.Component {
           </div>
           <Divider />
           <List>{sideList}</List>
-          <Divider />
         </Drawer>
         <main className={classes.content}>
           <div className={classes.appBarSpacer} />
