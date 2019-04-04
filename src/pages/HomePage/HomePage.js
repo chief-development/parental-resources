@@ -6,33 +6,38 @@ export default function HomePage() {
     <div className="Header">
       <h1
         style={{
-          color: "#111",
-          fontSize: "50px",
+          color: "#b6a16b",
+          fontSize: "60px",
           textAlign: "center",
           lineHeight: "2",
           letterSpacing: "-2px",
-          fontFamily: "Lato",
-          padding: "20px"
+          padding: "10px",
         }}
       >
         Parental Resource Center
       </h1>
 
       <br />
-      <hr />
+      <hr style={{ color: "#b6a16b" }} />
 
-      <p className="textContainer">
+      <p
+        style={{
+          fontSize: '18px',
+          textAlign: 'center',
+          margin: '40px',
+          padding: '10px'
+        }}>
         Welcome to Parental Resources! Lindenwood University aims to help both
         students and families when it comes to providing the necessary
         information for its future lions. This new addition to Lindenwood's
         growing website collection seeks to give relevant information to an
-        athlete's parents. Be sure to check out the Frequently Asked Questions
+        athlete's parents and students. Be sure to check out our Frequently Asked Questions
         under the FAQ tab if you have any questions. And if your question is not
         included, feel free to contact us via the contact tab!
       </p>
       <div class="row">
         <div class="column">
-          <img src={football} alt="New_Conference" width="600" height="450" />
+          <img src={football} alt="New_Conference" width="500" height="450" />
         </div>
         <div class="column">
           <img
