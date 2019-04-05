@@ -1,6 +1,6 @@
 import React from "react";
 import "./login.css";
-import LuLogo from "/Users/danielchavez/Documents/GitHub/parental-resources/src/img/LU_Logo.png";
+import LuLogo from "./LU_Logo.png";
 import { Link } from "react-router-dom";
 
 export default function LogIn() {
