@@ -1,8 +1,8 @@
 import React from "react";
-import TextField from "@material-ui/core/TextField";
-import MenuItem from "@material-ui/core/MenuItem";
-import SearchIcon from "@material-ui/icons/Search";
-import InputBase from "@material-ui/core/InputBase";
+import TextField from '@material-ui/core/TextField';
+import MenuItem from '@material-ui/core/MenuItem';
+import SearchIcon from '@material-ui/icons/Search';
+import InputBase from '@material-ui/core/InputBase';
 import Button from "@material-ui/core/Button";
 
 const categories = [
@@ -49,9 +49,10 @@ const sorting = [
     value: "mostPop",
     label: "Most Popular"
   }
-];
+]
 
 export default function FAQ() {
+
   const [values, setValues] = React.useState({
     categories: "AS",
     sorting: "mostRes"
@@ -63,26 +64,19 @@ export default function FAQ() {
 
   return (
     <div>
-      <h1
-        style={{
-          fontSize: "80px",
-          color: "#b3a272",
-          lineHeight: "2",
-          letterSpacing: "-2px",
-          textShadow: "0px 2px 3px #555",
-          textAlign: "left"
-        }}
-      >
-        FAQs
-      </h1>
+      <h1 style={{
+        fontSize: '80px', color: '#b3a272',
+        lineHeight: '2',
+        textAlign: 'center'
+      }}>FAQs</h1>
 
-      <div
-        class="container"
+      <div class="container"
         style={{
-          width: "80%",
-          backgroundColor: "white"
+          width: '80%',
+          backgroundColor: 'white'
         }}
       >
+
         <TextField
           id="category"
           select
@@ -92,7 +86,7 @@ export default function FAQ() {
           helperText="Filter Question by Category"
           margin="normal"
           variant="outlined"
-          style={{ margin: "40px" }}
+          style={{ margin: '40px' }}
         >
           {categories.map(option => (
             <MenuItem key={option.value} value={option.value}>
@@ -100,6 +94,7 @@ export default function FAQ() {
             </MenuItem>
           ))}
         </TextField>
+
 
         <TextField
           id="sorting"
@@ -110,7 +105,7 @@ export default function FAQ() {
           helperText="Sort Question by:"
           margin="normal"
           variant="outlined"
-          style={{ margin: "40px" }}
+          style={{ margin: '40px' }}
         >
           {sorting.map(option => (
             <MenuItem key={option.value} value={option.value}>
@@ -119,23 +114,25 @@ export default function FAQ() {
           ))}
         </TextField>
 
-        <SearchIcon
-          style={{
-            color: "#b3a272",
-            position: "relative",
-            left: "4%",
-            height: "20px",
-            width: "30px"
-          }}
+        <SearchIcon style={{
+          color: '#b3a272',
+          position: 'relative',
+          left: '4%',
+          height: '20px',
+          width: '30px'
+        }} />
+        <InputBase
+
+          placeholder="Search…"
+          style={{ margin: '40px' }}
         />
-        <InputBase placeholder="Search…" style={{ margin: "40px" }} />
 
         <Button
           variant="outlined"
           color="black"
           style={{
             height: "50px",
-            margin: "40px"
+            margin: '40px'
           }}
         >
           Go
