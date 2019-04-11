@@ -2,7 +2,7 @@ import React from "react";
 import "./login.css";
 import LuLogo from "./LU_Logo.png";
 import { Link } from "react-router-dom";
-
+import Footer from "./footer";
 export default function LogIn() {
   return (
     <div>
@@ -53,6 +53,7 @@ export default function LogIn() {
 
         </div>
       </form>
+      <Footer />
     </div>
   );
 }

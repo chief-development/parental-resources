@@ -1,6 +1,7 @@
 import React from "react";
 import football from "./Football.jpg";
 import random from "./Lion.jpg";
+import Footer from "./footer";
 export default function HomePage() {
   return (
     <div>
@@ -52,6 +53,7 @@ export default function HomePage() {
           />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

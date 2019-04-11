@@ -4,6 +4,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import Button from "@material-ui/core/Button";
+import Footer from "./footer";
 
 const categories = [
   {
@@ -138,6 +139,7 @@ export default function FAQ() {
           Go
         </Button>
       </div>
+      <Footer />
     </div>
   );
 }
