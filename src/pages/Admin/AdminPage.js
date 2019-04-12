@@ -6,6 +6,7 @@ import InputBase from "@material-ui/core/InputBase";
 import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
 import { Link } from "react-router-dom";
+import Footer from "./footer";
 
 const categories = [
   {
@@ -169,6 +170,7 @@ export default function Admin() {
           Go
         </Button>
       </div>
+      < Footer />
     </div>
   );
 }

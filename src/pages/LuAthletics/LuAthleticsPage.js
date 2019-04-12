@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./footer";
 
 export default function LuAthletics() {
   return (
@@ -10,6 +11,8 @@ export default function LuAthletics() {
       >
         {"Lindenwood Athletics"}
       </a>
+
+      <Footer />
     </div>
   );
 }
