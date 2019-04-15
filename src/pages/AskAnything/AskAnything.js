@@ -3,10 +3,9 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import "./ask.css";
 import MenuItem from "@material-ui/core/MenuItem";
-import Footer from "./footer";
 import { db } from "../../firebase/index";
 import { Link } from "react-router-dom";
-
+import Footer from "./footer";
 const categories = [
   {
     value: "Academic Success",
@@ -50,7 +49,7 @@ export function sendQuestion(
 ) {
   const question = {
     question: questionInput,
-    answer: null,
+    answer: "",
     date_asked: Date.now(),
     rank: 0,
     askedBy_email: askedBy_emailInput,

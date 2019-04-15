@@ -1,6 +1,5 @@
 import React from "react";
 import Footer from "./footer";
-
 export default function LuAthletics() {
   return (
     <div className="Header">
@@ -11,7 +10,6 @@ export default function LuAthletics() {
       >
         {"Lindenwood Athletics"}
       </a>
-
       <Footer />
     </div>
   );

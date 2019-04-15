@@ -1,7 +1,6 @@
 import React from "react";
 import football from "./Football.jpg";
 import random from "./Lion.jpg";
-import Footer from "./footer";
 export default function HomePage() {
   return (
     <div>
@@ -12,7 +11,7 @@ export default function HomePage() {
           textAlign: "center",
           lineHeight: "2",
           letterSpacing: "-2px",
-          padding: "10px",
+          padding: "10px"
         }}
       >
         Parental Resource Center
@@ -23,21 +22,22 @@ export default function HomePage() {
 
       <p
         style={{
-          position: 'relative',
-          left: '23%',
-          textAlign: 'center',
-          width: '650px',
-          fontSize: '18px',
-          margin: '40px',
-          padding: '10px'
-        }}>
+          position: "relative",
+          left: "23%",
+          textAlign: "center",
+          width: "650px",
+          fontSize: "18px",
+          margin: "40px",
+          padding: "10px"
+        }}
+      >
         Welcome to Parental Resources! Lindenwood University aims to help both
         students and families when it comes to providing the necessary
         information for its future lions. This new addition to Lindenwood's
         growing website collection seeks to give relevant information to an
-        athlete's parents and students. Be sure to check out our Frequently Asked Questions
-        under the FAQ tab if you have any questions. And if your question is not
-        included, feel free to contact us via the contact tab!
+        athlete's parents and students. Be sure to check out our Frequently
+        Asked Questions under the FAQ tab if you have any questions. And if your
+        question is not included, feel free to contact us via the contact tab!
       </p>
       <div class="row">
         <div class="column">
@@ -53,7 +53,6 @@ export default function HomePage() {
           />
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
