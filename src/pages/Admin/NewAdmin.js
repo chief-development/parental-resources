@@ -85,16 +85,27 @@ export default function NewAdmin() {
               color: "#b3a272"
             }}
           >
-            Questions
+            Unanswered Questions
           </Link>
+
           <Link
-            to="/login"
+            to="/answered"
             style={{
               margin: "20px",
               color: "#b3a272"
             }}
           >
-            New Admin
+            Answered Questions
+          </Link>
+
+          <Link
+            to="/newAdmin"
+            style={{
+              margin: "20px",
+              color: "#b3a272"
+            }}
+          >
+            Add New Admin
           </Link>
         </span>
       </h1>

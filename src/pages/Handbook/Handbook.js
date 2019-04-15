@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from './footer';
+
 export default function Handbook() {
   return (
     <div className="Header">
@@ -18,7 +18,6 @@ export default function Handbook() {
       >
         <h6>Student Life Sports Handbook</h6>
       </a>
-      <Footer />
     </div>
   );
 }

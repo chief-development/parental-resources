@@ -32,7 +32,7 @@ export default function AfterSubmit() {
 
       <p style={{ fontSize: "18px", textAlign: "center" }}>
         {" "}
-        Than you for your question. Your question is awaiting an answer.
+        Thank you for your question. Your question is awaiting an answer.
       </p>
     </div>
   );

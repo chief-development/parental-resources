@@ -62,7 +62,7 @@ const sorting = [
 
 */
 
-export default function Admin() {
+export default function AnsweredQuestions() {
   {
     /*       
     const [values, setValues] = React.useState({
@@ -81,12 +81,12 @@ export default function Admin() {
   const [keys, setkeys] = React.useState([]); //array of question IDs
   const [answerInput, setanswerInput] = React.useState("");
 
-  //select questions that has NO answer and create snapshot
+  //select questions that already have some answer and create snapshot
   React.useEffect(
     () => {
       //db.collection("questions").where('show_on_web', '==',true)
       db.collection("questions")
-        .where("answer", "==", "")
+        .where("answer", ">", "")
         .onSnapshot(snapshot => {
           let q = [];
           let id = [];
@@ -255,7 +255,7 @@ export default function Admin() {
                 <textarea
                   id="answertextarea"
                   name="answertextarea"
-                  placeholder="Type your answer.."
+                  defaultValue={answer}
                   onChange={event => {
                     setanswerInput(event.target.value); //save the text from textarea
                   }}
@@ -277,7 +277,7 @@ export default function Admin() {
                   style={{
                     height: "50px"
                   }}
-                  onClick={() => answerquestion(answerInput, keys[index])}
+                  onClick={() => changeanswerquestion(answerInput, keys[index])}
                 >
                   Submit Answer
                 </Button>
@@ -293,7 +293,7 @@ export default function Admin() {
   );
 }
 
-export function answerquestion(answerInput, id) {
+export function changeanswerquestion(answerInput, id) {
   //update the question
   db.collection("questions")
     .doc(id)
@@ -303,7 +303,7 @@ export function answerquestion(answerInput, id) {
     "Your answer was successfully updated",
     "Question Updated",
     3500
-  ); //show notification
+  );
 }
 
 export function deletequestion(id) {
@@ -316,5 +316,8 @@ export function deletequestion(id) {
     "Question was successfully deleted",
     "Question Deleted",
     3500
-  ); //show notification
+  );
 }
+
+//when submit and not changing anything
+//current tab underline, differnt color, bold...
