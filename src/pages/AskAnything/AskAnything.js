@@ -5,7 +5,7 @@ import "./ask.css";
 import MenuItem from "@material-ui/core/MenuItem";
 import { db } from "../../firebase/index";
 import { Link } from "react-router-dom";
-
+import Footer from "./footer";
 const categories = [
   {
     value: "Academic Success",
@@ -200,6 +200,7 @@ export default function AskAnything() {
 
         <br />
       </form>
+      <Footer />
     </div>
   );
 }

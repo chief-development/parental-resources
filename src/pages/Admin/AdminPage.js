@@ -8,6 +8,7 @@ import Divider from "@material-ui/core/Divider";
 import { Link } from "react-router-dom";
 import { db } from "../../firebase/index";
 import moment from "moment";
+import Footer from "./footer";
 import {
   NotificationContainer,
   NotificationManager
@@ -283,6 +284,7 @@ export default function Admin() {
                 </Button>
 
                 <hr />
+                <Footer />
               </div>
             );
           })}

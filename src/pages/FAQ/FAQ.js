@@ -6,7 +6,7 @@ import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
-
+import Footer from "./footer";
 {
   /*
 const categories = [
@@ -213,6 +213,7 @@ const [keywordInput, setKeywordInput] = React.useState("");
           );
         })}
       </div>
+      <Footer />
     </div>
   );
 }
