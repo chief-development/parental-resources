@@ -6,11 +6,15 @@ import LuAthletics from "./pages/LuAthletics/LuAthleticsPage";
 import StaffPage from "./pages/Staff/StaffPage";
 import AskAnything from "./pages/AskAnything/AskAnything";
 import Handbook from "./pages/Handbook/Handbook";
+import AfterSubmit from "./pages/AskAnything/AfterSubmit";
 import LogIn from "./pages/Admin/LogIn";
 import Admin from "./pages/Admin/AdminPage";
 import NewAdmin from "./pages/Admin/NewAdmin";
+import AnsweredQuestions from "./pages/Admin/AnsweredQuestions";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./layouts/MainLayout";
+import { db } from "./firebase";
+import "react-notifications/lib/notifications.css";
 
 function App() {
   return (
@@ -23,9 +27,11 @@ function App() {
           <Route path="/handbook" component={Handbook} />
           <Route path="/faq" component={FAQ} />
           <Route path="/ask" component={AskAnything} />
+          <Route path="/submitted" component={AfterSubmit} />
           <Route path="/login" component={LogIn} />
           <Route path="/admin" component={Admin} />
           <Route path="/newAdmin" component={NewAdmin} />
+          <Route path="/answered" component={AnsweredQuestions} />
         </Switch>
       </Dashboard>
     </Router>
