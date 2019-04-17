@@ -20,7 +20,8 @@ export default function LogIn() {
             textAlign: "center",
             fontStretch: "1px",
             color: "white",
-            fontWeight: "600"
+            fontWeight: "600",
+            backgroundColor: "rgba(1,1,1, 0.2)"
           }}
         >
           Admin Portal
@@ -28,12 +29,18 @@ export default function LogIn() {
 
         <div class="container-login">
           <label
-            style={{ color: "white", fontSize: "20px", fontWeight: "600" }}
+            style={{
+              color: "white",
+              fontSize: "20px",
+              fontWeight: "600",
+              backgroundColor: "rgba(1,1,1, 0.2)"
+            }}
           >
             Username
           </label>
           <br />
           <input
+            className="inputs"
             type="text"
             name="uname"
             placeholder="Enter Username"
@@ -50,12 +57,18 @@ export default function LogIn() {
           <br />
 
           <label
-            style={{ color: "white", fontSize: "20px", fontWeight: "600" }}
+            style={{
+              color: "white",
+              fontSize: "20px",
+              fontWeight: "600",
+              backgroundColor: "rgba(1,1,1, 0.2)"
+            }}
           >
             Password
           </label>
           <br />
           <input
+            className="inputs"
             type="password"
             name="psw"
             placeholder="Enter Password"

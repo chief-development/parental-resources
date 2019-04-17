@@ -43,4 +43,14 @@ span.psw {
   cursor: pointer;
   width: 15%;
   font-size: 17px;
+  transition: all 0.2s ease-in-out;
+}
+.lbutton:hover {
+  transform: scale(1.1);
+}
+.inputs {
+  transition: all 0.2s ease-in-out;
+}
+.inputs:hover {
+  transform: scale(1.1);
 }
