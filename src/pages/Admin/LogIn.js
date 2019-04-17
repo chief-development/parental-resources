@@ -5,28 +5,42 @@ import { Link } from "react-router-dom";
 import Footer from "./footer";
 export default function LogIn() {
   return (
-    <div>
+    <div className="bg-image">
       <form className="loginForm">
         <div className="imgcontainer">
           <img src={LuLogo} alt="Avatar" className="avatar" />
         </div>
         <br />
+        <br />
+        <br />
         <h2
           className="logInTittle"
           style={{
-            fontSize: "65px",
+            fontSize: "70px",
             textAlign: "center",
             fontStretch: "1px",
-            color: "#b6a16b"
+            color: "white",
+            fontWeight: "600",
+            backgroundColor: "rgba(1,1,1, 0.2)"
           }}
         >
-          Log In
+          Admin Portal
         </h2>
 
         <div class="container-login">
-          <label>Username</label>
+          <label
+            style={{
+              color: "white",
+              fontSize: "20px",
+              fontWeight: "600",
+              backgroundColor: "rgba(1,1,1, 0.2)"
+            }}
+          >
+            Username
+          </label>
           <br />
           <input
+            className="inputs"
             type="text"
             name="uname"
             placeholder="Enter Username"
@@ -42,9 +56,19 @@ export default function LogIn() {
           />
           <br />
 
-          <label>Password</label>
+          <label
+            style={{
+              color: "white",
+              fontSize: "20px",
+              fontWeight: "600",
+              backgroundColor: "rgba(1,1,1, 0.2)"
+            }}
+          >
+            Password
+          </label>
           <br />
           <input
+            className="inputs"
             type="password"
             name="psw"
             placeholder="Enter Password"

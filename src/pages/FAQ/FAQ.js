@@ -7,6 +7,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
 import Footer from "./footer";
+import "./faq.css";
 {
   /*
 const categories = [
@@ -101,20 +102,12 @@ const [keywordInput, setKeywordInput] = React.useState("");
           lineHeight: "2",
           letterSpacing: "-2px",
           textShadow: "0px 2px 3px #555",
-          textAlign: "left"
+          textAlign: "center"
         }}
       >
         FAQ
       </h1>
-
-      <div
-        class="container"
-        style={{
-          width: "80%",
-          backgroundColor: "white"
-        }}
-      >
-        {/*
+      {/*
 	        <TextField
 	          id="category"
 	          select
@@ -169,8 +162,7 @@ const [keywordInput, setKeywordInput] = React.useState("");
                         setKeywordInput(value);
                         }}
                 
-                     
-                  
+                   
 	        />
 	
 	        <Button
@@ -188,31 +180,35 @@ const [keywordInput, setKeywordInput] = React.useState("");
               <hr />
 	   */}
 
-        {questions.map((q, index) => {
-          const { question, date_asked, category, answer } = q;
+      {questions.map((q, index) => {
+        const { question, date_asked, category, answer } = q;
 
-          {
-            /* transform date into readable format */
-          }
-          const timestamp = Date({ date_asked });
-          const formattedDate = moment(timestamp).format("ll");
+        {
+          /* transform date into readable format */
+        }
+        const timestamp = Date({ date_asked });
+        const formattedDate = moment(timestamp).format("ll");
 
-          {
-            /* print set of answered questions */
-          }
-          return (
-            <div>
-              <p>
-                Date: {formattedDate} &nbsp;&nbsp;&nbsp;&nbsp;Category:{" "}
-                {category}&nbsp;&nbsp;&nbsp;&nbsp;
+        {
+          /* print set of answered questions */
+        }
+        return (
+          <div className="container">
+            <p className="date-text">
+              Date: {formattedDate} &nbsp;&nbsp;&nbsp;&nbsp;{" "}
+              <p className="category-text">
+                Category: {category}&nbsp;&nbsp;&nbsp;&nbsp;
               </p>
-              <p>{question}</p>
-              <p>{answer}</p>
-              <hr />
-            </div>
-          );
-        })}
-      </div>
+            </p>
+
+            <p className="question-text"> Q: {question}</p>
+            <hr style={{ borderTop: "1px dashed #8c8b8b" }} />
+            <p className="answer-text"> A: {answer}</p>
+            <br />
+            <hr />
+          </div>
+        );
+      })}
       <Footer />
     </div>
   );

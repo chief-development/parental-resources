@@ -9,6 +9,22 @@ import Footer from "./footer";
 export default function StaffPage() {
   return (
     <>
+      <h1
+        style={{
+          fontSize: "80px",
+          color: "#b3a272",
+          lineHeight: "2",
+          letterSpacing: "-2px",
+          textShadow: "0px 2px 3px #555",
+          textAlign: "center"
+        }}
+      >
+        Staff
+      </h1>
+      <p style={{ fontSize: "20px", textAlign: "center" }}>
+        Here you can find the staff you are looking for. Click on the Category
+        and look for you future coaches!
+      </p>
       <ExpansionPanel style={{ padding: "2px", margin: "10px" }}>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <Typography

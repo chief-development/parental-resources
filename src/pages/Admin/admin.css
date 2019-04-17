@@ -1,0 +1,25 @@
+.button-admin {
+  background-color: #b3a272;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 10px;
+  margin: 20px;
+  box-shadow: 1px 1px #000000;
+  text-shadow: 1px 1px 10px #000000;
+  border: ridge #000000 1px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.button-admin:hover {
+  background-color: #c2af7b;
+  background-image: -webkit-linear-gradient(top, #c2af7b, #c2af7b);
+  background-image: -moz-linear-gradient(top, #c2af7b, #c2af7b);
+  background-image: -ms-linear-gradient(top, #c2af7b, #c2af7b);
+  background-image: -o-linear-gradient(top, #c2af7b, #c2af7b);
+  background-image: linear-gradient(to bottom, #c2af7b, #c2af7b);
+  text-decoration: none;
+}
