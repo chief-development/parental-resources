@@ -75,7 +75,7 @@ const styles = theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen
     }),
-    backgroundColor: "lightgrey",
+    backgroundColor: "#b8b3a5",
     Visibility: "transparent"
   },
   drawerPaperClose: {

@@ -84,10 +84,12 @@ export default function AskAnything() {
     <div className="askForm">
       <h3
         style={{
-          fontSize: "65px",
-          textAlign: "center",
-          fontStretch: "1px",
-          color: "#b6a16b"
+          fontSize: "50px",
+          color: "#b3a272",
+          lineHeight: "2",
+          letterSpacing: "-2px",
+          textShadow: "0px 2px 3px #555",
+          textAlign: "center"
         }}
       >
         Contact Us

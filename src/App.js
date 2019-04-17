@@ -15,6 +15,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./layouts/MainLayout";
 import { db } from "./firebase";
 import "react-notifications/lib/notifications.css";
+import "./App.css";
 
 function App() {
   return (
