@@ -1,9 +1,9 @@
 import React from "react";
+import "./admin.css";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
-import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
 import { Link } from "react-router-dom";
 import { db } from "../../firebase/index";
@@ -248,12 +248,27 @@ export default function Admin() {
             }
             return (
               <div>
-                <p>Asked by: {askedBy_name}</p>
-                <p>E-mail: {askedBy_email}</p>
-                <p>Date asked: {formattedDate}</p>
-                <p>Category: {category}</p>
-                <p>Question: {question} </p>
-                <label>Answer: </label>
+                <p>
+                  <span style={{ fontWeight: "600" }}>Asked by: </span>
+                  {askedBy_name}
+                </p>
+                <p>
+                  <span style={{ fontWeight: "600" }}>E-mail: </span>
+                  {askedBy_email}
+                </p>
+                <p>
+                  <span style={{ fontWeight: "600" }}>Date asked: </span>
+                  {formattedDate}
+                </p>
+                <p>
+                  <span style={{ fontWeight: "600" }}>Category: </span>
+                  {category}
+                </p>
+                <p>
+                  <span style={{ fontWeight: "600" }}>Question: </span>
+                  {question}{" "}
+                </p>
+                <label style={{ fontSize: "20px" }}>Answer: </label>
                 <textarea
                   id="answertextarea"
                   name="answertextarea"
@@ -263,26 +278,18 @@ export default function Admin() {
                   }}
                 />
 
-                <Button
-                  variant="outlined"
-                  color="black"
-                  style={{
-                    height: "50px"
-                  }}
+                <button
+                  className="button-admin"
                   onClick={() => deletequestion(keys[index])}
                 >
                   Delete Question
-                </Button>
-                <Button
-                  variant="outlined"
-                  color="black"
-                  style={{
-                    height: "50px"
-                  }}
+                </button>
+                <button
+                  className="button-admin"
                   onClick={() => answerquestion(answerInput, keys[index])}
                 >
                   Submit Answer
-                </Button>
+                </button>
 
                 <hr />
                 <Footer />
