@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "CHIEF-Development-Parental-Resources",
+  "name": "Lindenwood_Parental_Resources",
   "builds": [
     {
       "src": "package.json",
@@ -19,8 +19,8 @@
       "dest": "/static/$1"
     },
     {
-      "src": "/favicon.ico",
-      "dest": "/favicon.ico"
+      "src": "/LUIcon.ico",
+      "dest": "/LUIcon.ico"
     },
     {
       "src": "/asset-manifest.json",
