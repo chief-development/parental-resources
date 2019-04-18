@@ -1,0 +1,10 @@
+.HomeBackground {
+  background-image: url("./backgroundImage.jpg");
+  align-self: auto;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.6s;
+  height: 790px;
+  background-position: center;
+  background-position-y: 0px;
+}

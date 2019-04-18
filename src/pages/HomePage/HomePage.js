@@ -1,6 +1,6 @@
 import React from "react";
-import football from "./Football.jpg";
-import random from "./Lion.jpg";
+import "./HomePage.css";
+
 import Footer from "../LuAthletics/footer";
 
 export default function HomePage() {
@@ -21,41 +21,29 @@ export default function HomePage() {
       </h1>
 
       <hr style={{ color: "#b6a16b" }} />
-
-      <p
-        style={{
-          position: "relative",
-          left: "23%",
-          textAlign: "center",
-          width: "690px",
-          fontSize: "19px",
-          margin: "40px",
-          padding: "10px"
-        }}
-      >
-        Welcome to Parental Resources! Lindenwood University aims to help both
-        students and families when it comes to providing the necessary
-        information for its future lions. This new addition to Lindenwood's
-        growing website collection seeks to give relevant information to an
-        athlete's parents and students. We want to connect to our future lions
-        and their parents. Be sure to check out our Frequently Asked Questions
-        under the FAQ tab if you have any questions. And if your question is not
-        included, feel free to contact us via the contact tab!
-      </p>
-      <div class="row">
-        <div class="column">
-          <img src={football} alt="New_Conference" width="500" height="450" />
-        </div>
-        <div class="column">
-          <img
-            src={random}
-            alt="content"
-            width="300"
-            height="400"
-            align="left"
-          />
-        </div>
+      <div className="HomeBackground">
+        <p
+          style={{
+            position: "relative",
+            left: "23%",
+            textAlign: "center",
+            width: "690px",
+            fontSize: "19px",
+            margin: "20px",
+            padding: "10px"
+          }}
+        >
+          Welcome to Parental Resources! Lindenwood University aims to help both
+          students and families when it comes to providing the necessary
+          information for its future lions. This new addition to Lindenwood's
+          growing website collection seeks to give relevant information to an
+          athlete's parents and students. We want to connect to our future lions
+          and their parents. Be sure to check out our Frequently Asked Questions
+          under the FAQ tab if you have any questions. And if your question is
+          not included, feel free to contact us via the contact tab!
+        </p>
       </div>
+
       <Footer />
     </div>
   );
