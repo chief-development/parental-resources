@@ -5,6 +5,7 @@ import InputBase from "@material-ui/core/InputBase";
 import Divider from "@material-ui/core/Divider";
 import { Link } from "react-router-dom";
 import { db } from "../../firebase/index";
+import Button from "@material-ui/core/Button";
 import "./admin.css";
 import moment from "moment";
 import {
@@ -276,18 +277,22 @@ export default function AnsweredQuestions() {
                   }}
                 />
 
-                <button
+                <Button
+                  variant="extendedFab"
                   className="button-admin"
                   onClick={() => deletequestion(keys[index])}
+                  style={{ margin: "4px" }}
                 >
                   Delete Question
-                </button>
-                <button
+                </Button>
+                <Button
+                  variant="extendedFab"
                   className="button-admin"
                   onClick={() => changeanswerquestion(answerInput, keys[index])}
+                  style={{ margin: "4px" }}
                 >
                   Submit Answer
-                </button>
+                </Button>
 
                 <hr />
               </div>
