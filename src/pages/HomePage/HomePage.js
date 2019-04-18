@@ -44,7 +44,7 @@ export default function HomePage() {
           not included, feel free to contact us via the contact tab!
         </p>
       </div>
-
+      <br />
       <Footer />
     </div>
   );
