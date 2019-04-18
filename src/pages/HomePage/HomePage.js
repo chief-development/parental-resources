@@ -27,7 +27,7 @@ export default function HomePage() {
           position: "relative",
           left: "23%",
           textAlign: "center",
-          width: "690px",
+          width: "790px",
           fontSize: "19px",
           margin: "40px",
           padding: "10px"
