@@ -7,6 +7,7 @@ import InputBase from "@material-ui/core/InputBase";
 import Divider from "@material-ui/core/Divider";
 import { Link } from "react-router-dom";
 import { db } from "../../firebase/index";
+import Button from "@material-ui/core/Button";
 import moment from "moment";
 import Footer from "./footer";
 import {
@@ -281,19 +282,22 @@ export default function Admin() {
                     setanswerInput(event.target.value); //save the text from textarea
                   }}
                 />
-
-                <button
+                <Button
                   className="button-admin"
                   onClick={() => deletequestion(keys[index])}
+                  variant="extendedFab"
+                  style={{ margin: "4px" }}
                 >
                   Delete Question
-                </button>
-                <button
+                </Button>
+                <Button
+                  variant="extendedFab"
                   className="button-admin"
+                  style={{ margin: "4px" }}
                   onClick={() => answerquestion(answerInput, keys[index])}
                 >
                   Submit Answer
-                </button>
+                </Button>
 
                 <hr />
                 <Footer />
@@ -307,7 +311,7 @@ export default function Admin() {
   );
 }
 
-export function answerquestion(answerInput, id) {
+function answerquestion(answerInput, id) {
   //update the question
   db.collection("questions")
     .doc(id)
@@ -320,7 +324,7 @@ export function answerquestion(answerInput, id) {
   ); //show notification
 }
 
-export function deletequestion(id) {
+function deletequestion(id) {
   //delete the question
   db.collection("questions")
     .doc(id)
