@@ -85,7 +85,6 @@ const [keywordInput, setKeywordInput] = React.useState("");
       .where("answer", ">", "")
       .onSnapshot(snapshot => {
         let q = [];
-
         snapshot.forEach(doc => {
           q.push(doc.data());
         });
@@ -186,8 +185,7 @@ const [keywordInput, setKeywordInput] = React.useState("");
         {
           /* transform date into readable format */
         }
-        const timestamp = Date({ date_asked });
-        const formattedDate = moment(timestamp).format("ll");
+        const formattedDate = moment(questions[index].date_asked).format("ll");
 
         {
           /* print set of answered questions */
@@ -195,15 +193,27 @@ const [keywordInput, setKeywordInput] = React.useState("");
         return (
           <div className="container">
             <p className="date-text">
-              Date: {formattedDate} &nbsp;&nbsp;&nbsp;&nbsp;{" "}
+              <span style={{ fontWeight: "600" }}>Date: </span>{" "}
+              <span style={{ fontWeight: "300" }}>
+                {formattedDate} &nbsp;&nbsp;&nbsp;&nbsp;{" "}
+              </span>
               <p className="category-text">
-                Category: {category}&nbsp;&nbsp;&nbsp;&nbsp;
+                <span style={{ fontWeight: "600" }}>Category: </span>{" "}
+                <span style={{ fontWeight: "300" }}>
+                  {category}&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
               </p>
             </p>
 
-            <p className="question-text"> Q: {question}</p>
+            <p className="question-text">
+              <span style={{ fontWeight: "600" }}> Q: </span>
+              <span style={{ fontWeight: "300" }}>{question}</span>
+            </p>
             <hr style={{ borderTop: "1px dashed #8c8b8b" }} />
-            <p className="answer-text"> A: {answer}</p>
+            <p className="answer-text">
+              <span style={{ fontWeight: "600" }}>A: </span>{" "}
+              <span style={{ fontWeight: "300" }}>{answer}</span>
+            </p>
             <br />
             <hr />
           </div>
