@@ -27,10 +27,10 @@ export default function HomePage() {
             position: "relative",
             left: "23%",
             textAlign: "center",
-            width: "690px",
+            width: "700px",
             fontSize: "19px",
             margin: "20px",
-            padding: "10px",
+            paddingTop: "100px",
             color: "white"
           }}
         >
