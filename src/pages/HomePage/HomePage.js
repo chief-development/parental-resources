@@ -8,7 +8,7 @@ export default function HomePage() {
     <div>
       <h1
         style={{
-          lineHeight: "2",
+          lineHeight: "1",
           letterSpacing: "-2px",
           padding: "5px",
           fontSize: "80px",
@@ -30,7 +30,8 @@ export default function HomePage() {
             width: "690px",
             fontSize: "19px",
             margin: "20px",
-            padding: "10px"
+            padding: "10px",
+            color: "white"
           }}
         >
           Welcome to Parental Resources! Lindenwood University aims to help both
