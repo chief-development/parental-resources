@@ -8,30 +8,38 @@ export default function HomePage() {
     <div>
       <h1
         style={{
+          //style for the header of the home page
           lineHeight: "1",
-          letterSpacing: "-2px",
-          padding: "5px",
-          fontSize: "80px",
-          color: "#b3a272",
-          textShadow: "0px 2px 3px #555",
-          textAlign: "center"
+          letterSpacing: "-2px", // space between letters of -2 px
+          padding: "5px", // padding around of 5 px
+          fontSize: "80px", // size of the font 80 px
+          color: "#b3a272", //color mustard yellow for the letters
+          textShadow: "0px 2px 3px #555", // give a little shadow to the letters
+          textAlign: "center" // text set to the center
         }}
       >
         Parental Resource Center
       </h1>
 
-      <hr style={{ color: "#b6a16b" }} />
-      <div className="HomeBackground">
+      <hr
+      //separation line
+      />
+
+      <div
+        className="HomeBackground"
+        // class name call HomePage.css, load a image for the background
+      >
         <p
           style={{
-            position: "relative",
+            //style for the paragraph
+            position: "relative", // set position to relative
             left: "23%",
-            textAlign: "center",
-            width: "700px",
-            fontSize: "19px",
-            margin: "20px",
-            paddingTop: "100px",
-            color: "white"
+            textAlign: "center", // set the text to the center
+            width: "700px", // set the width of the text
+            fontSize: "19px", // set size font of the letters
+            margin: "20px", // set margin
+            paddingTop: "100px", // set padding for the top
+            color: "white" // change color of the words to white
           }}
         >
           Welcome to Parental Resources! Lindenwood University aims to help both
@@ -45,7 +53,9 @@ export default function HomePage() {
         </p>
       </div>
       <br />
-      <Footer />
+      <Footer
+      // footer for the lindenwood pages, import from footer.js
+      />
     </div>
   );
 }

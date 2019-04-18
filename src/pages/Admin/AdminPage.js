@@ -300,13 +300,13 @@ export default function Admin() {
                 </Button>
 
                 <hr />
-                <Footer />
               </div>
             );
           })}
         </form>
         <NotificationContainer />
       </div>
+      <Footer />
     </div>
   );
 }
