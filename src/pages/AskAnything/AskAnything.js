@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import "./ask.css";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -81,127 +80,154 @@ export default function AskAnything() {
   };
 
   return (
-    <div className="askForm">
-      <h3
-        style={{
-          fontSize: "50px",
-          color: "#b3a272",
-          lineHeight: "2",
-          letterSpacing: "-2px",
-          textShadow: "0px 2px 3px #555",
-          textAlign: "center"
-        }}
-      >
-        Contact Us
-      </h3>
-      <br />
-      <h4
-        style={{
-          textAlign: "center",
-          fontStretch: "1px",
-          fontSize: "25px"
-        }}
-      >
-        If you have any questions, feel free to get in touch with us!
-      </h4>
-
-      <hr
-        style={{ backgroundColor: "#b6a16b", borderTop: "px double #b6a16b" }}
-      />
-
-      <p style={{ fontSize: "18px", textAlign: "center" }}>
-        {" "}
-        Please provide the information requested.
-      </p>
-
-      <form noValidate>
-        <label>Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Your name.."
-          required
-          value={askedBy_nameInput}
-          onChange={event => {
-            const value = event.target.value;
-            setaskedBy_nameInput(value);
+    <div className="askForm-bg">
+      <div className="askForm">
+        <h3
+          style={{
+            fontSize: "60px",
+            color: "#b3a272",
+            lineHeight: "2",
+            letterSpacing: "-2px",
+            textShadow: "0px 2px 3px #555",
+            textAlign: "center"
           }}
-        />
-
-        <label>Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Your email"
-          required
-          value={askedBy_emailInput}
-          onChange={event => {
-            const value = event.target.value;
-            setaskedBy_emailInput(value);
-          }}
-        />
-
-        <TextField
-          id="category"
-          select
-          label="Select"
-          value={values.categories}
-          onChange={handleChange("categories")}
-          helperText="Please select a category"
-          margin="normal"
-          variant="outlined"
         >
-          {categories.map(option => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
-
+          Contact Us
+        </h3>
         <br />
-
-        <label>Question</label>
-        <textarea
-          id="subject"
-          name="subject"
-          placeholder="Write something.."
-          required
-          value={questionInput}
-          onChange={event => {
-            const value = event.target.value;
-            setquestionInput(value);
+        <h4
+          style={{
+            textAlign: "center",
+            fontStretch: "1px",
+            fontSize: "30px",
+            color: "white"
           }}
+        >
+          If you have any questions, feel free to get in touch with us!
+        </h4>
+
+        <hr
+          style={{ backgroundColor: "#b6a16b", borderTop: "1px double white" }}
         />
 
-        <br />
-        <Link to={"/submitted"} style={{ textDecoration: "none" }}>
-          <Button
-            disabled={!isEnabled}
-            onClick={() =>
-              sendQuestion(
-                values.categories,
-                questionInput,
-                askedBy_emailInput,
-                askedBy_nameInput
-              )
-            }
+        <p
+          style={{
+            fontSize: "20px",
+            textAlign: "center",
+            color: "white"
+          }}
+        >
+          {" "}
+          Please provide the information requested.
+        </p>
+
+        <form noValidate>
+          <label
+            style={{ color: "white", fontSize: "18px", fontWeight: "100" }}
+          >
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            className="inputs-ask"
+            placeholder="Your name.."
+            required
+            value={askedBy_nameInput}
+            onChange={event => {
+              const value = event.target.value;
+              setaskedBy_nameInput(value);
+            }}
+          />
+
+          <label
+            style={{ color: "white", fontSize: "18px", fontWeight: "100" }}
+          >
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            className="inputs-ask"
+            placeholder="Your email"
+            required
+            value={askedBy_emailInput}
+            onChange={event => {
+              const value = event.target.value;
+              setaskedBy_emailInput(value);
+            }}
+          />
+
+          <TextField
+            id="category"
+            select
+            label="Select"
+            value={values.categories}
+            onChange={handleChange("categories")}
+            helperText="Please select a category"
+            margin="normal"
             variant="outlined"
-            color="black"
             style={{
-              position: "relative",
-              left: "41%",
-              width: "90px",
-              height: "50px"
+              color: "white"
             }}
           >
-            Submit
-          </Button>
-        </Link>
+            {categories.map(option => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
 
-        <br />
-      </form>
+          <br />
+
+          <label
+            style={{ color: "white", fontSize: "18px", fontWeight: "100" }}
+          >
+            Question
+          </label>
+          <textarea
+            className="inputs-ask"
+            id="subject"
+            name="subject"
+            placeholder="Write something.."
+            required
+            value={questionInput}
+            onChange={event => {
+              const value = event.target.value;
+              setquestionInput(value);
+            }}
+          />
+
+          <br />
+          <Link to={"/submitted"} style={{ textDecoration: "none" }}>
+            <button
+              disabled={!isEnabled}
+              onClick={() =>
+                sendQuestion(
+                  values.categories,
+                  questionInput,
+                  askedBy_emailInput,
+                  askedBy_nameInput
+                )
+              }
+              className="ask-button"
+              style={{
+                position: "relative",
+                left: "40%",
+                width: "100px",
+                height: "60px",
+                color: "white"
+              }}
+            >
+              Submit
+            </button>
+          </Link>
+
+          <br />
+        </form>
+      </div>
       <Footer />
     </div>
   );

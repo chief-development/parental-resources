@@ -1,14 +1,13 @@
 .question-text {
-  font-size: 25px;
-  font-weight: 500;
+  font-size: 27px;
   padding-left: 15px;
 }
 .answer-text {
-  font-size: 20px;
+  font-size: 24px;
   padding-left: 15px;
 }
 .date-text {
-  font-size: 18px;
+  font-size: 20px;
   padding-left: 15px;
   padding-top: 10px;
 }

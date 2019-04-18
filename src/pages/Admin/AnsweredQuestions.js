@@ -237,8 +237,9 @@ export default function AnsweredQuestions() {
             {
               /* transform date into readable format */
             }
-            const timestamp = Date({ date_asked });
-            const formattedDate = moment(timestamp).format("ll");
+            const formattedDate = moment(questions[index].date_asked).format(
+              "ll"
+            );
 
             {
               /* print set of unasnwered questions */

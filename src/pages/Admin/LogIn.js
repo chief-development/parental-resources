@@ -20,8 +20,7 @@ export default function LogIn() {
             textAlign: "center",
             fontStretch: "1px",
             color: "white",
-            fontWeight: "600",
-            backgroundColor: "rgba(1,1,1, 0.2)"
+            fontWeight: "600"
           }}
         >
           Admin Portal
@@ -32,8 +31,7 @@ export default function LogIn() {
             style={{
               color: "white",
               fontSize: "20px",
-              fontWeight: "600",
-              backgroundColor: "rgba(1,1,1, 0.2)"
+              fontWeight: "600"
             }}
           >
             Username
@@ -60,8 +58,7 @@ export default function LogIn() {
             style={{
               color: "white",
               fontSize: "20px",
-              fontWeight: "600",
-              backgroundColor: "rgba(1,1,1, 0.2)"
+              fontWeight: "600"
             }}
           >
             Password

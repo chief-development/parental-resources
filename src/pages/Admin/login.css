@@ -3,15 +3,12 @@
   margin: 0 auto;
 }
 .bg-image {
-  background-image: url("./bg.jpg");
+  background-image: url("./bg.png");
   display: block;
+  background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
-  transition: all 0.6s;
   z-index: -1;
-}
-.bg-image:hover {
-  opacity: 0.8;
 }
 .container-login {
   flex-direction: column;
@@ -26,7 +23,7 @@
   margin: 10px 0 12px 0;
 }
 img.avatar {
-  width: 55%;
+  width: 65%;
 }
 
 span.psw {
@@ -35,22 +32,23 @@ span.psw {
 }
 
 .lbutton {
-  background-color: #b6a16b;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
+  background-color: #b3a272;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 10px;
+  margin: 20px;
+  text-decoration: none;
+  display: inline-block;
   cursor: pointer;
-  width: 15%;
-  font-size: 17px;
-  transition: all 0.2s ease-in-out;
 }
 .lbutton:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 .inputs {
   transition: all 0.2s ease-in-out;
 }
 .inputs:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }

@@ -117,11 +117,14 @@ export default function Admin() {
       >
         Admin Portal
       </h1>
-      <span
+      <p
         style={{
           fontSize: "20px",
           margin: "50px",
-          textShadow: "0px 1px 1px #555"
+          textShadow: "0px 1px 1px #555",
+          textAlign: "center",
+          backgroundColor: "rgba(255,255,255,0.6)",
+          borderRadius: "20px"
         }}
       >
         <Link
@@ -153,7 +156,7 @@ export default function Admin() {
         >
           Add New Admin
         </Link>
-      </span>
+      </p>
 
       <Divider />
 
@@ -240,8 +243,9 @@ export default function Admin() {
             {
               /* transform date into readable format */
             }
-            const timestamp = Date({ date_asked });
-            const formattedDate = moment(timestamp).format("ll");
+            const formattedDate = moment(questions[index].date_asked).format(
+              "ll"
+            );
 
             {
               /* print set of unasnwered questions */

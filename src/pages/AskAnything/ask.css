@@ -11,15 +11,32 @@ select,
 textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #b6a16b;
+  border: 1px solid #111;
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
 }
-
-input[type="submit"]:hover {
-  background-color: #45a049;
+.ask-button:hover {
+  background-color: #a08d5c;
 }
-
+.askForm-bg {
+  background-image: url("./bg-ask.png");
+  display: block;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.ask-button {
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 10px;
+  background-color: #b3a272;
+  margin: 10px;
+}
+.input-ask {
+  transition: all 0.4s ease-in-out;
+}
+.inputs-ask:hover {
+  transform: scale(1.2);
+}
