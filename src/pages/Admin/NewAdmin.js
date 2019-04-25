@@ -9,7 +9,16 @@ import {
   NotificationManager
 } from "react-notifications";
 
+function signout() {
+  firebase.auth().signOut();
+  window.location = "/login";
+}
+
 export default function NewAdmin() {
+  let user = firebase.auth().currentUser; //get current signed in user
+
+  checkuser(user);
+
   const [emailInput, setemailInput] = React.useState("");
   const [passwordInput, setpasswordInput] = React.useState("");
 
@@ -18,6 +27,9 @@ export default function NewAdmin() {
 
   return (
     <div>
+      <span style={{ float: "right" }}>
+        <a onClick={() => signout()}>Sign Out</a>
+      </span>
       <h1
         style={{
           fontSize: "80px",
@@ -25,48 +37,48 @@ export default function NewAdmin() {
           lineHeight: "2",
           letterSpacing: "-2px",
           textShadow: "0px 2px 3px #555",
-          textAlign: "center"
+          textAlign: "left"
         }}
       >
         Admin Portal
+        <span
+          style={{
+            fontSize: "20px",
+            margin: "50px",
+            textShadow: "0px 1px 1px #555"
+          }}
+        >
+          <Link
+            to="/admin"
+            style={{
+              margin: "20px",
+              color: "#b3a272"
+            }}
+          >
+            Unanswered Questions
+          </Link>
+
+          <Link
+            to="/answered"
+            style={{
+              margin: "20px",
+              color: "#b3a272"
+            }}
+          >
+            Answered Questions
+          </Link>
+
+          <Link
+            to="/newAdmin"
+            style={{
+              margin: "20px",
+              color: "#b3a272"
+            }}
+          >
+            Add New Admin
+          </Link>
+        </span>
       </h1>
-      <span
-        style={{
-          fontSize: "20px",
-          margin: "50px",
-          textShadow: "0px 1px 1px #555"
-        }}
-      >
-        <Link
-          to="/admin"
-          style={{
-            margin: "20px",
-            color: "#b3a272"
-          }}
-        >
-          Unanswered Questions
-        </Link>
-
-        <Link
-          to="/answered"
-          style={{
-            margin: "20px",
-            color: "#b3a272"
-          }}
-        >
-          Answered Questions
-        </Link>
-
-        <Link
-          to="/newAdmin"
-          style={{
-            margin: "20px",
-            color: "#b3a272"
-          }}
-        >
-          Add New Admin
-        </Link>
-      </span>
       <Divider />
       <div
         class="container"
@@ -136,16 +148,16 @@ export default function NewAdmin() {
           <br />
 
           <Button
-            disabled={!isEnabled}
-            onClick={() => addAdmin(emailInput, passwordInput)}
-            variant="outlined"
-            color="black"
             style={{
               position: "relative",
               left: "41%",
               width: "90px",
               height: "50px"
             }}
+            disabled={!isEnabled}
+            onClick={() => addAdmin(emailInput, passwordInput)}
+            variant="outlined"
+            color="black"
           >
             Submit
           </Button>
@@ -219,4 +231,14 @@ export function sendResetPassword(emailInput, passwordInput) {
       // [END_EXCLUDE]
     });
   // [END sendpasswordemail];
+}
+
+function checkuser(user) {
+  //if there is no signed in user, redirect out of admin portal
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (!user) {
+      window.location = "/accessdenied";
+    }
+  });
 }
