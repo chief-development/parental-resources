@@ -3,9 +3,7 @@
   margin: 0 auto;
 }
 .bg-image {
-  background-image: url("./bg.png");
   display: block;
-  background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
   z-index: -1;
@@ -44,11 +42,12 @@ span.psw {
   cursor: pointer;
 }
 .lbutton:hover {
-  transform: scale(1.2);
+  background-color: #a08d5c;
 }
 .inputs {
   transition: all 0.2s ease-in-out;
 }
-.inputs:hover {
-  transform: scale(1.2);
+
+.forgotPasswordLink:hover {
+  cursor: pointer;
 }

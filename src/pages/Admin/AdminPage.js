@@ -10,6 +10,7 @@ import { db } from "../../firebase/index";
 import Button from "@material-ui/core/Button";
 import moment from "moment";
 import Footer from "./footer";
+import firebase from "firebase";
 import {
   NotificationContainer,
   NotificationManager
@@ -64,6 +65,11 @@ const sorting = [
 
 */
 
+function signout() {
+  firebase.auth().signOut();
+  window.location = "/login";
+}
+
 export default function Admin() {
   {
     /*       
@@ -78,6 +84,14 @@ export default function Admin() {
   };
 */
   }
+
+  let user = firebase.auth().currentUser; //get current signed in user
+  //if there is no signed in user, redirect out of admin portal
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (!user) {
+      window.location = "/accessdenied";
+    }
+  });
 
   const [questions, setQuestions] = React.useState([]);
   const [keys, setkeys] = React.useState([]); //array of question IDs
@@ -106,6 +120,9 @@ export default function Admin() {
 
   return (
     <div>
+      <span style={{ float: "right" }}>
+        <a onClick={() => signout()}>Sign Out</a>
+      </span>
       <h1
         style={{
           fontSize: "80px",
@@ -113,7 +130,8 @@ export default function Admin() {
           lineHeight: "2",
           letterSpacing: "-2px",
           textShadow: "0px 2px 3px #555",
-          textAlign: "center"
+          textAlign: "center",
+          flex: "10"
         }}
       >
         Admin Portal
@@ -125,14 +143,16 @@ export default function Admin() {
           textShadow: "0px 1px 1px #555",
           textAlign: "center",
           backgroundColor: "rgba(255,255,255,0.6)",
-          borderRadius: "20px"
+          borderRadius: "20px",
+          flex: "auto"
         }}
       >
         <Link
           to="/admin"
           style={{
             margin: "20px",
-            color: "#b3a272"
+            color: "#b3a272",
+            flex: "auto"
           }}
         >
           Unanswered Questions
@@ -142,7 +162,8 @@ export default function Admin() {
           to="/answered"
           style={{
             margin: "20px",
-            color: "#b3a272"
+            color: "#b3a272",
+            flex: "auto"
           }}
         >
           Answered Questions
@@ -152,7 +173,8 @@ export default function Admin() {
           to="/newAdmin"
           style={{
             margin: "20px",
-            color: "#b3a272"
+            color: "#b3a272",
+            flex: "auto"
           }}
         >
           Add New Admin
