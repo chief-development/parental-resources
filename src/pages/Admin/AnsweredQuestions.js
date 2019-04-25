@@ -119,7 +119,9 @@ export default function AnsweredQuestions() {
   return (
     <div>
       <span style={{ float: "right" }}>
-        <a onClick={() => signout()}>Sign Out</a>
+        <a className="signoutbtn" onClick={() => signout()}>
+          Sign Out
+        </a>
       </span>
       <h1
         style={{
@@ -326,12 +328,16 @@ export function changeanswerquestion(answerInput, id) {
   //update the question
   db.collection("questions")
     .doc(id)
-    .update({ answer: answerInput });
+    .update({
+      answer: answerInput,
+      date_answered: Date.now(),
+      answeredBy: firebase.auth().currentUser.email
+    });
   document.getElementById("questionset").reset(); //clear all textareas with answer
   NotificationManager.success(
     "Your answer was successfully updated",
     "Question Updated",
-    3500
+    3000
   );
 }
 
@@ -344,6 +350,6 @@ export function deletequestion(id) {
   NotificationManager.success(
     "Question was successfully deleted",
     "Question Deleted",
-    3500
+    3000
   );
 }

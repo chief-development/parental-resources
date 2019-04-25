@@ -28,7 +28,9 @@ export default function NewAdmin() {
   return (
     <div>
       <span style={{ float: "right" }}>
-        <a onClick={() => signout()}>Sign Out</a>
+        <a className="signoutbtn" onClick={() => signout()}>
+          Sign Out
+        </a>
       </span>
       <h1
         style={{
