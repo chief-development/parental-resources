@@ -101,7 +101,7 @@ export default function AskAnything() {
             textAlign: "center",
             fontStretch: "1px",
             fontSize: "30px",
-            color: "white"
+            color: "#b3a272"
           }}
         >
           If you have any questions, feel free to get in touch with us!
@@ -115,7 +115,7 @@ export default function AskAnything() {
           style={{
             fontSize: "20px",
             textAlign: "center",
-            color: "white"
+            color: "#b3a272"
           }}
         >
           {" "}
@@ -124,7 +124,7 @@ export default function AskAnything() {
 
         <form noValidate>
           <label
-            style={{ color: "white", fontSize: "18px", fontWeight: "100" }}
+            style={{ color: "#b3a272", fontSize: "18px", fontWeight: "100" }}
           >
             Name
           </label>
@@ -143,7 +143,7 @@ export default function AskAnything() {
           />
 
           <label
-            style={{ color: "white", fontSize: "18px", fontWeight: "100" }}
+            style={{ color: "#b3a272", fontSize: "18px", fontWeight: "100" }}
           >
             Email
           </label>
@@ -184,7 +184,7 @@ export default function AskAnything() {
           <br />
 
           <label
-            style={{ color: "white", fontSize: "18px", fontWeight: "100" }}
+            style={{ color: "#b3a272", fontSize: "18px", fontWeight: "100" }}
           >
             Question
           </label>

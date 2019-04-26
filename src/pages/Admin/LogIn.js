@@ -3,10 +3,22 @@ import "./login.css";
 import LuLogo from "./LU_Logo.png";
 import { Link } from "react-router-dom";
 import Footer from "./footer";
+import firebase from "firebase";
 export default function LogIn() {
+  let user = firebase.auth().currentUser; //get current signed in user
+  //if the user is currently signed in - skip log in form
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      window.location = "/admin";
+    }
+  });
+
+  const [emailInput, setemailInput] = React.useState("");
+  const [passInput, setpassInput] = React.useState("");
+
   return (
     <div className="bg-image">
-      <form className="loginForm">
+      <div className="loginForm">
         <div className="imgcontainer">
           <img src={LuLogo} alt="Avatar" className="avatar" />
         </div>
@@ -19,7 +31,7 @@ export default function LogIn() {
             fontSize: "70px",
             textAlign: "center",
             fontStretch: "1px",
-            color: "white",
+            color: "#b3a272",
             fontWeight: "600"
           }}
         >
@@ -29,7 +41,7 @@ export default function LogIn() {
         <div class="container-login">
           <label
             style={{
-              color: "white",
+              color: "#b3a272",
               fontSize: "20px",
               fontWeight: "600"
             }}
@@ -40,8 +52,9 @@ export default function LogIn() {
           <input
             className="inputs"
             type="text"
-            name="uname"
-            placeholder="Enter Username"
+            name="email"
+            id="email"
+            placeholder="Enter E-mail"
             required
             style={{
               width: "100%",
@@ -51,12 +64,17 @@ export default function LogIn() {
               border: "1px solid #b6a16b",
               boxSizing: "border-box"
             }}
+            value={emailInput}
+            onChange={event => {
+              const value = event.target.value;
+              setemailInput(value);
+            }}
           />
           <br />
 
           <label
             style={{
-              color: "white",
+              color: "#b3a272",
               fontSize: "20px",
               fontWeight: "600"
             }}
@@ -68,6 +86,7 @@ export default function LogIn() {
             className="inputs"
             type="password"
             name="psw"
+            id="pass"
             placeholder="Enter Password"
             required
             style={{
@@ -78,17 +97,77 @@ export default function LogIn() {
               border: "1px solid #b6a16b",
               boxSizing: "border-box"
             }}
+            value={passInput}
+            onChange={event => {
+              const value = event.target.value;
+              setpassInput(value);
+            }}
           />
           <br />
-          <Link to={"/admin"}>
-            <button type="submit" className="lbutton">
-              Login
-            </button>
-          </Link>
+
+          <button
+            type="submit"
+            onClick={() => login(emailInput, passInput)}
+            className="lbutton"
+          >
+            Login
+          </button>
+
+          <a
+            style={{ marginLeft: "20px", color: "#007bff" }}
+            className="forgotPasswordLink"
+            onClick={() => forgotPassword(emailInput)}
+          >
+            {"Forgot Password?"}
+          </a>
           <br />
         </div>
-      </form>
+      </div>
       <Footer />
     </div>
   );
+}
+
+function login(emailInput, passInput) {
+  //try to sign in
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(emailInput, passInput)
+    .then(user => {
+      //login successfull
+      window.location = "/admin"; //redirect to admin portal
+    })
+    .catch(error => {
+      //unsuccessfull login -> show error
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // [START_EXCLUDE]
+      if (errorCode === "auth/wrong-password") {
+        alert("Wrong password.");
+      } else {
+        alert(errorMessage);
+      }
+    });
+}
+
+function forgotPassword(emailInput) {
+  //send reset password email
+  firebase
+    .auth()
+    .sendPasswordResetEmail(emailInput)
+    .then(function() {
+      // Password Reset Email Sent!
+      alert("Email to reset the password was sent to " + emailInput);
+    })
+    .catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+
+      if (errorCode == "auth/invalid-email") {
+        alert(errorMessage);
+      } else if (errorCode == "auth/user-not-found") {
+        alert(errorMessage);
+      }
+    });
 }

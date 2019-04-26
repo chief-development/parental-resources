@@ -8,6 +8,7 @@ import { db } from "../../firebase/index";
 import Button from "@material-ui/core/Button";
 import "./admin.css";
 import moment from "moment";
+import firebase from "firebase";
 import {
   NotificationContainer,
   NotificationManager
@@ -62,6 +63,11 @@ const sorting = [
 
 */
 
+function signout() {
+  firebase.auth().signOut();
+  window.location = "/login";
+}
+
 export default function AnsweredQuestions() {
   {
     /*       
@@ -76,6 +82,14 @@ export default function AnsweredQuestions() {
   };
 */
   }
+
+  let user = firebase.auth().currentUser; //get current signed in user
+  //if there is no signed in user, redirect out of admin portal
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (!user) {
+      window.location = "/accessdenied";
+    }
+  });
 
   const [questions, setQuestions] = React.useState([]);
   const [keys, setkeys] = React.useState([]); //array of question IDs
@@ -104,6 +118,9 @@ export default function AnsweredQuestions() {
 
   return (
     <div>
+      <span style={{ float: "right" }}>
+        <a onClick={() => signout()}>Sign Out</a>
+      </span>
       <h1
         style={{
           fontSize: "80px",
@@ -330,6 +347,3 @@ export function deletequestion(id) {
     3500
   );
 }
-
-//when submit and not changing anything
-//current tab underline, differnt color, bold...
