@@ -11,6 +11,7 @@ export default function StaffPage() {
     <>
       <h1
         style={{
+          //style for the header
           fontSize: "80px",
           color: "#b3a272",
           lineHeight: "2",

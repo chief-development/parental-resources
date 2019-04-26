@@ -1,4 +1,5 @@
 export const men = [
+  // array of the links for the diferent men coach's sports
   {
     text: "Swimimng and Diving",
     href: "https://lindenwoodlions.com/sports/2014/7/21/MSWIM_0721142822.aspx"
@@ -72,6 +73,7 @@ export const men = [
   }
 ];
 export const women = [
+  // array of the links for the diferent women coach's sports
   {
     text: "Swimimng and Diving",
     href: "https://lindenwoodlions.com/sports/2014/7/21/MSWIM_0721142822.aspx" //
@@ -154,6 +156,7 @@ export const women = [
   }
 ];
 export const coed = [
+  // links for the co-ed sports
   {
     text: "Billiards",
     href: "https://lindenwoodlions.com/coaches.aspx?roster=1696"
@@ -180,6 +183,7 @@ export const coed = [
   }
 ];
 export const otherStaff = [
+  // lionks for the different staff related to the Athletic deparment
   {
     text: "Staff Directory",
     href: "https://lindenwoodlions.com/staff.aspx"

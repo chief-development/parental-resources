@@ -21,20 +21,36 @@ function PaperSheet(props) {
       <Paper className={classes.root} elevation={1}>
         <Typography variant="h5" component="h3">
           <a
+            href="https://www.lindenwood.edu"
+            target="__blank"
+            rel="noopener noreferrer"
+            style={{ color: "#b3a272" }}
+          >
+            {"Lindenwood University"}
+          </a>
+        </Typography>
+        <Typography component="p">
+          Here is the Lindenwood University website.
+        </Typography>
+      </Paper>
+      <br />
+      <Paper className={classes.root} elevation={1}>
+        <Typography variant="h5" component="h3">
+          <a
             href="http://www.lindenwoodlions.com"
             target="__blank"
             rel="noopener noreferrer"
+            style={{ color: "#b3a272" }}
           >
             {"Lindenwood Athletics"}
           </a>
         </Typography>
         <Typography component="p">
-          Paper can be used to build surface or other elements for your
-          application.
+          Here is the Lindenwood Athletics website.
         </Typography>
-
-        <Footer />
       </Paper>
+
+      <Footer />
     </div>
   );
 }
