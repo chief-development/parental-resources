@@ -134,44 +134,44 @@ export default function AnsweredQuestions() {
         }}
       >
         Admin Portal
-        <span
+      </h1>
+      <span
+        style={{
+          fontSize: "25px",
+          margin: "50px",
+          textShadow: "0px 1px 1px #555"
+        }}
+      >
+        <Link
+          to="/admin"
           style={{
-            fontSize: "20px",
-            margin: "50px",
-            textShadow: "0px 1px 1px #555"
+            margin: "20px",
+            color: "#b3a272"
           }}
         >
-          <Link
-            to="/admin"
-            style={{
-              margin: "20px",
-              color: "#b3a272"
-            }}
-          >
-            Unanswered Questions
-          </Link>
+          Unanswered Questions
+        </Link>
 
-          <Link
-            to="/answered"
-            style={{
-              margin: "20px",
-              color: "#b3a272"
-            }}
-          >
-            Answered Questions
-          </Link>
+        <Link
+          to="/answered"
+          style={{
+            margin: "20px",
+            color: "#b3a272"
+          }}
+        >
+          Answered Questions
+        </Link>
 
-          <Link
-            to="/newAdmin"
-            style={{
-              margin: "20px",
-              color: "#b3a272"
-            }}
-          >
-            Add New Admin
-          </Link>
-        </span>
-      </h1>
+        <Link
+          to="/newAdmin"
+          style={{
+            margin: "20px",
+            color: "#b3a272"
+          }}
+        >
+          Add New Admin
+        </Link>
+      </span>
 
       <Divider />
 
