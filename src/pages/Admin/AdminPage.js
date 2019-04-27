@@ -132,56 +132,48 @@ export default function Admin() {
           lineHeight: "2",
           letterSpacing: "-2px",
           textShadow: "0px 2px 3px #555",
-          textAlign: "center",
-          flex: "10"
+          textAlign: "left"
         }}
       >
         Admin Portal
+        <span
+          style={{
+            fontSize: "20px",
+            margin: "50px",
+            textShadow: "0px 1px 1px #555"
+          }}
+        >
+          <Link
+            to="/admin"
+            style={{
+              margin: "20px",
+              color: "#b3a272"
+            }}
+          >
+            Unanswered Questions
+          </Link>
+
+          <Link
+            to="/answered"
+            style={{
+              margin: "20px",
+              color: "#b3a272"
+            }}
+          >
+            Answered Questions
+          </Link>
+
+          <Link
+            to="/newAdmin"
+            style={{
+              margin: "20px",
+              color: "#b3a272"
+            }}
+          >
+            Add New Admin
+          </Link>
+        </span>
       </h1>
-      <p
-        style={{
-          fontSize: "20px",
-          margin: "50px",
-          textShadow: "0px 1px 1px #555",
-          textAlign: "center",
-          backgroundColor: "rgba(255,255,255,0.6)",
-          borderRadius: "20px",
-          flex: "auto"
-        }}
-      >
-        <Link
-          to="/admin"
-          style={{
-            margin: "20px",
-            color: "#b3a272",
-            flex: "auto"
-          }}
-        >
-          Unanswered Questions
-        </Link>
-
-        <Link
-          to="/answered"
-          style={{
-            margin: "20px",
-            color: "#b3a272",
-            flex: "auto"
-          }}
-        >
-          Answered Questions
-        </Link>
-
-        <Link
-          to="/newAdmin"
-          style={{
-            margin: "20px",
-            color: "#b3a272",
-            flex: "auto"
-          }}
-        >
-          Add New Admin
-        </Link>
-      </p>
 
       <Divider />
 

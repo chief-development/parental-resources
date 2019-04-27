@@ -8,73 +8,18 @@ import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
 import Footer from "./footer";
 import "./faq.css";
-{
-  /*
-const categories = [
-	  {
-	    value: "Academic Success",
-	    label: "Academic Success"
-	  },
-	  {
-	    value: "Athletic Communication",
-	    label: "Athletic Communication"
-	  },
-	  {
-	    value: "Athletic Performance",
-	    label: "Athletic Performance"
-	  },
-	  {
-	    value: "Athletic Training",
-	    label: "Athletic Training"
-	  },
-	  {
-	    value: "IC. NCAA Compliance",
-	    label: "IC. NCAA Compliance"
-	  },
-	  {
-	    value: "GameDay, Events and Operations",
-	    label: "GameDay, Events and Operations"
-	  },
-	  {
-	    value: "NCAA Rules",
-	    label: "NCAA Rules"
-	  },
-	  {
-	    value: "Other",
-	    label: "Other"
-	  }
-	];
-	
-	const sorting = [
-	  {
-	    value: "mostRes",
-	    label: "Most Recent"
-	  },
-	  {
-	    value: "mostPop",
-	    label: "Most Popular"
-	  }
-	]
-    
-*/
-}
 
 export default function FAQ() {
-  {
-    /*
-const [keywordInput, setKeywordInput] = React.useState("");
+  const [keywordInput, setKeywordInput] = React.useState("");
 
+  const [values, setValues] = React.useState({
+    categories: "Academic Success",
+    sorting: "mostRes"
+  });
 
-       const [values, setValues] = React.useState({
-	    categories: "Academic Success",
-	    sorting: "mostRes"
-	  });
-	
-	  const handleChange = name => event => {
-	    setValues({ ...values, [name]: event.target.value });
-	  };  
-*/
-  }
+  const handleChange = name => event => {
+    setValues({ ...values, [name]: event.target.value });
+  };
 
   const [questions, setQuestions] = React.useState([]);
 
@@ -101,95 +46,54 @@ const [keywordInput, setKeywordInput] = React.useState("");
           lineHeight: "2",
           letterSpacing: "-2px",
           textShadow: "0px 2px 3px #555",
-          textAlign: "center"
+          textAlign: "left"
         }}
       >
         FAQ
       </h1>
       {/*
-	        <TextField
-	          id="category"
-	          select
-	          label="Select"
-	          value={values.categories}
-	          onChange={handleChange("categories")}
-	          helperText="Filter Question by Category"
-	          margin="normal"
-	          variant="outlined"
-	          style={{ margin: '40px' }}
-	        >
-	          {categories.map(option => (
-	            <MenuItem key={option.value} value={option.value}>
-	              {option.label}
-	            </MenuItem>
-	          ))}
-	        </TextField>
-	
-	
-	        <TextField
-	          id="sorting"
-	          select
-	          label="Select"
-	          value={values.sorting}
-	          onChange={handleChange("sorting")}
-	          helperText="Sort Question by:"
-	          margin="normal"
-	          variant="outlined"
-	          style={{ margin: '40px' }}
-	        >
-	          {sorting.map(option => (
-	            <MenuItem key={option.value} value={option.value}>
-	              {option.label}
-	            </MenuItem>
-	          ))}
-	        </TextField>
-	
-	        <SearchIcon style={{
-	          color: '#b3a272',
-	          position: 'relative',
-	          left: '4%',
-	          height: '20px',
-	          width: '30px'
-	        }} />
-	        <InputBase
-	
-	          placeholder="Search…"
-	          style={{ margin: '40px' }}
-                      value={keywordInput}
-                    onChange={event => {
-                        const value = event.target.value;
-                        setKeywordInput(value);
-                        }}
-                
-                   
-	        />
-	
-	        <Button
-	          variant="outlined"
-	          color="black"
-                  onClick =""
-	          style={{
-	            height: "50px",
-	            margin: '40px'
-	          }}
-	        >
-	          Go
-	        </Button>
-	      
-              <hr />
-	   */}
+      <SearchIcon
+        style={{
+          color: "#b3a272",
+          position: "relative",
+          left: "33%",
+          top: "3%",
+          height: "25px",
+          width: "30px"
+        }}
+      />
+			*/}
+      <InputBase
+        placeholder="Search…"
+        style={{ margin: "10px", width: "300px" }}
+        value={keywordInput}
+        onChange={event => {
+          const value = event.target.value;
+          setKeywordInput(value);
+        }}
+      />
+
+      <Button
+        variant="outlined"
+        color="black"
+        onClick={() => console.log(keywordInput)}
+        style={{
+          height: "40px",
+          margin: "-3px"
+        }}
+      >
+        Go
+      </Button>
+
+      <hr />
 
       {questions.map((q, index) => {
         const { question, date_asked, category, answer } = q;
 
-        {
-          /* transform date into readable format */
-        }
+        /* transform date into readable format */
         const formattedDate = moment(questions[index].date_asked).format("ll");
 
-        {
-          /* print set of answered questions */
-        }
+        /* print set of answered questions */
         return (
           <div className="container">
             <p className="date-text">
