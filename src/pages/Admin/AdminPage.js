@@ -121,7 +121,9 @@ export default function Admin() {
   return (
     <div>
       <span style={{ float: "right" }}>
-        <a onClick={() => signout()}>Sign Out</a>
+        <a className="signoutbtn" onClick={() => signout()}>
+          Sign Out
+        </a>
       </span>
       <h1
         style={{
@@ -130,29 +132,23 @@ export default function Admin() {
           lineHeight: "2",
           letterSpacing: "-2px",
           textShadow: "0px 2px 3px #555",
-          textAlign: "center",
-          flex: "10"
+          textAlign: "left"
         }}
       >
         Admin Portal
       </h1>
-      <p
+      <span
         style={{
-          fontSize: "20px",
+          fontSize: "25px",
           margin: "50px",
-          textShadow: "0px 1px 1px #555",
-          textAlign: "center",
-          backgroundColor: "rgba(255,255,255,0.6)",
-          borderRadius: "20px",
-          flex: "auto"
+          textShadow: "0px 1px 1px #555"
         }}
       >
         <Link
           to="/admin"
           style={{
             margin: "20px",
-            color: "#b3a272",
-            flex: "auto"
+            color: "#b3a272"
           }}
         >
           Unanswered Questions
@@ -162,8 +158,7 @@ export default function Admin() {
           to="/answered"
           style={{
             margin: "20px",
-            color: "#b3a272",
-            flex: "auto"
+            color: "#b3a272"
           }}
         >
           Answered Questions
@@ -173,14 +168,12 @@ export default function Admin() {
           to="/newAdmin"
           style={{
             margin: "20px",
-            color: "#b3a272",
-            flex: "auto"
+            color: "#b3a272"
           }}
         >
           Add New Admin
         </Link>
-      </p>
-
+      </span>
       <Divider />
 
       <div
@@ -337,7 +330,11 @@ function answerquestion(answerInput, id) {
   //update the question
   db.collection("questions")
     .doc(id)
-    .update({ answer: answerInput });
+    .update({
+      answer: answerInput,
+      date_answered: Date.now(),
+      answeredBy: firebase.auth().currentUser.email
+    });
   document.getElementById("questionset").reset(); //clear all textareas with answer
   NotificationManager.success(
     "Your answer was successfully updated",

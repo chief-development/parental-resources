@@ -119,7 +119,9 @@ export default function AnsweredQuestions() {
   return (
     <div>
       <span style={{ float: "right" }}>
-        <a onClick={() => signout()}>Sign Out</a>
+        <a className="signoutbtn" onClick={() => signout()}>
+          Sign Out
+        </a>
       </span>
       <h1
         style={{
@@ -128,14 +130,14 @@ export default function AnsweredQuestions() {
           lineHeight: "2",
           letterSpacing: "-2px",
           textShadow: "0px 2px 3px #555",
-          textAlign: "center"
+          textAlign: "left"
         }}
       >
         Admin Portal
       </h1>
       <span
         style={{
-          fontSize: "20px",
+          fontSize: "25px",
           margin: "50px",
           textShadow: "0px 1px 1px #555"
         }}
@@ -170,6 +172,7 @@ export default function AnsweredQuestions() {
           Add New Admin
         </Link>
       </span>
+
       <Divider />
 
       <div
@@ -326,12 +329,16 @@ export function changeanswerquestion(answerInput, id) {
   //update the question
   db.collection("questions")
     .doc(id)
-    .update({ answer: answerInput });
+    .update({
+      answer: answerInput,
+      date_answered: Date.now(),
+      answeredBy: firebase.auth().currentUser.email
+    });
   document.getElementById("questionset").reset(); //clear all textareas with answer
   NotificationManager.success(
     "Your answer was successfully updated",
     "Question Updated",
-    3500
+    3000
   );
 }
 
@@ -344,6 +351,6 @@ export function deletequestion(id) {
   NotificationManager.success(
     "Question was successfully deleted",
     "Question Deleted",
-    3500
+    3000
   );
 }

@@ -108,6 +108,7 @@ export default function LogIn() {
           <button
             type="submit"
             onClick={() => login(emailInput, passInput)}
+            //onKeyPress={Enter => login(emailInput, passInput)}
             className="lbutton"
           >
             Login
