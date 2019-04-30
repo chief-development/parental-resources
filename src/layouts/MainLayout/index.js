@@ -136,7 +136,7 @@ class Dashboard extends React.Component {
           Compliance
         </NavLink>
         <NavLink to="/trainingDepartment" icon={Training}>
-          Athletics Training Department
+          Athletics Training
         </NavLink>
         <NavLink to="/faq" icon={HelpIcon}>
           FAQ
