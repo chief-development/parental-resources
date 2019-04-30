@@ -29,7 +29,7 @@ function HomePage(props) {
           flex: "1"
         }}
       >
-        Athletic Training Department
+        Athletic Training
       </h1>
 
       <hr
