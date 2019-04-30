@@ -9,7 +9,9 @@ import Handbook from "./pages/Handbook/Handbook";
 import AfterSubmit from "./pages/AskAnything/AfterSubmit";
 import LogIn from "./pages/Admin/LogIn";
 import Admin from "./pages/Admin/AdminPage";
+import Compliance from "./pages/Compliance/Compliance";
 import NewAdmin from "./pages/Admin/NewAdmin";
+import TrainingDeparment from "./pages/TrainingDeparment/TrainingDepartment";
 import AnsweredQuestions from "./pages/Admin/AnsweredQuestions";
 import AccessDenied from "./pages/Admin/AccessDenied";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -30,6 +32,8 @@ function App() {
           <Route path="/ask" component={AskAnything} />
           <Route path="/submitted" component={AfterSubmit} />
           <Route path="/login" component={LogIn} />
+          <Route path="/compliance" component={Compliance} />
+          <Route path="/trainingDepartment" component={TrainingDeparment} />
           <Route path="/admin" component={Admin} />
           <Route path="/newAdmin" component={NewAdmin} />
           <Route path="/answered" component={AnsweredQuestions} />

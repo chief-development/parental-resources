@@ -18,6 +18,8 @@ import HelpIcon from "@material-ui/icons/HelpOutlineTwoTone";
 import PeopleIcon from "@material-ui/icons/PeopleTwoTone";
 import AskIcon from "@material-ui/icons/EditTwoTone";
 import PersonIcon from "@material-ui/icons/PersonTwoTone";
+import Training from "@material-ui/icons/FitnessCenter";
+import Supervisor from "@material-ui/icons/SupervisorAccount";
 import HandbookIcon from "@material-ui/icons/DescriptionTwoTone";
 import AthleticsIcon from "@material-ui/icons/DirectionsBikeTwoTone";
 import logo from "./LU_RERS.png";
@@ -129,6 +131,12 @@ class Dashboard extends React.Component {
         </NavLink>
         <NavLink to="/handbook" icon={HandbookIcon}>
           Handbooks
+        </NavLink>
+        <NavLink to="/compliance" icon={Supervisor}>
+          Compliance
+        </NavLink>
+        <NavLink to="/trainingDepartment" icon={Training}>
+          Athletics Training Department
         </NavLink>
         <NavLink to="/faq" icon={HelpIcon}>
           FAQ
