@@ -17,7 +17,10 @@ export default function LogIn() {
   const [passInput, setpassInput] = React.useState("");
 
   return (
-    <div className="bg-image">
+    <div
+      className="bg-image"
+      onKeyPress={event => keyPressed(event, emailInput, passInput)}
+    >
       <div className="loginForm">
         <div className="imgcontainer">
           <img src={LuLogo} alt="Avatar" className="avatar" />
@@ -115,11 +118,11 @@ export default function LogIn() {
           </button>
 
           <a
-            style={{ marginLeft: "20px", color: "#007bff" }}
+            style={{ marginLeft: "10px", color: "#007bff" }}
             className="forgotPasswordLink"
             onClick={() => forgotPassword(emailInput)}
           >
-            {"Forgot Password?"}
+            Forgot&nbsp;Password?
           </a>
           <br />
         </div>
@@ -171,4 +174,10 @@ function forgotPassword(emailInput) {
         alert(errorMessage);
       }
     });
+}
+
+function keyPressed(event, emailInput, passInput) {
+  if (event.key === "Enter") {
+    login(emailInput, passInput);
+  }
 }

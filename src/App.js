@@ -16,6 +16,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./layouts/MainLayout";
 import { db } from "./firebase";
 import "react-notifications/lib/notifications.css";
+import Compliance from "./pages/LuAthletics/compliance";
+import TrainingDeparment from "./pages/LuAthletics/trainingDepartment";
+import Insurance from "./pages/LuAthletics/insurance";
 
 function App() {
   return (
@@ -32,6 +35,9 @@ function App() {
           <Route path="/login" component={LogIn} />
           <Route path="/admin" component={Admin} />
           <Route path="/newAdmin" component={NewAdmin} />
+          <Route path="/compliance" component={Compliance} />
+          <Route path="/insurance" component={Insurance} />
+          <Route path="/trainingDepartment" component={TrainingDeparment} />
           <Route path="/answered" component={AnsweredQuestions} />
           <Route path="/accessdenied" component={AccessDenied} />
         </Switch>
