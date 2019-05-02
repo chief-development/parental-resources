@@ -22,7 +22,7 @@ export default function StaffPage() {
       >
         Staff
       </h1>
-      <p style={{ fontSize: "20px", textAlign: "center" }}>
+      <p style={{ fontSize: "24px", textAlign: "center", fontWeight: "300" }}>
         Here you can find the staff you are looking for. Click on the Category
         and look for you future coaches!
       </p>

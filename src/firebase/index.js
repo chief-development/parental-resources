@@ -2,6 +2,7 @@ import * as firebase from "firebase";
 import "firebase/firestore";
 import "./";
 
+//Link and information for the database and the app
 const config = {
   apiKey: "AIzaSyBqhHQFBEw0z6P6rV9IIgNt5HcerZDrgDM",
   authDomain: "senior-project-5c02e.firebaseapp.com",
