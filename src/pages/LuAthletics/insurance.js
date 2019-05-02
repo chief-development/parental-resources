@@ -1,6 +1,7 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
+import NavLink from "./NavLink.js";
 
 const styles = {
   p: {
@@ -180,6 +181,9 @@ function HomePage(props) {
           255-2216 Email: marnold@lindenwood.edu
         </p>
       </form>
+      <div style={{ width: "150px" }}>
+        <NavLink to="/athletics">Go Back!</NavLink>
+      </div>
     </div>
   );
 }

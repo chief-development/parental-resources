@@ -1,6 +1,7 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
+import NavLink from "./NavLink.js";
 
 const styles = {
   p: {
@@ -25,7 +26,6 @@ function HomePage(props) {
           fontSize: "80px", // size of the font 80 px
           color: "#b3a272", //color mustard yellow for the letters
           textShadow: "0px 2px 3px #555", // give a little shadow to the letters
-          textAlign: "center", // text set to the center
           flex: "1"
         }}
       >
@@ -71,6 +71,9 @@ function HomePage(props) {
         located in the Hyland Arena, Field House, Clubhouse, and the new Student
         Athlete Center (SAC).
       </p>
+      <div style={{ width: "150px" }}>
+        <NavLink to="/athletics">Go Back!</NavLink>
+      </div>
     </div>
   );
 }
