@@ -169,7 +169,11 @@ function Handbook(props) {
         </div>
       </from>
 
-      <Footer />
+      <div style={{ position: "relative", paddingBottom: "60px" }}>
+        <Footer
+          style={{ position: "absolute", left: "0", right: "0", bottom: "0" }}
+        />
+      </div>
     </div>
   );
 }

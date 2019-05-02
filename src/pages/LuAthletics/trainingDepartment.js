@@ -1,6 +1,7 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
+import Footer from "./footer";
 
 const styles = {
   p: {
@@ -71,6 +72,11 @@ function HomePage(props) {
         located in the Hyland Arena, Field House, Clubhouse, and the new Student
         Athlete Center (SAC).
       </p>
+      <div style={{ position: "relative", paddingBottom: "60px" }}>
+        <Footer
+          style={{ position: "absolute", left: "0", right: "0", bottom: "0" }}
+        />
+      </div>
     </div>
   );
 }

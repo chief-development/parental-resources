@@ -7,7 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import Arch from "./LUArch.jpg";
+import oneR from "./oneRoar.jpg";
 import Footer from "../LuAthletics/footer";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
@@ -19,7 +19,7 @@ import spiritShop from "./Background.jpg";
 
 const styles = {
   card: {
-    maxWidth: 550
+    maxWidth: 750
   },
   media: {
     // ⚠️ object-fit is not supported by IE 11.
@@ -99,7 +99,7 @@ function HomePage(props) {
         <div>
           <Card className={classes.card}>
             <CardActionArea>
-              <CardMedia component="img" alt="LU" height="360" src={Arch} />
+              <CardMedia component="img" alt="LU" height="350" src={oneR} />
               <CardContent>
                 <Typography
                   gutterBottom
@@ -122,7 +122,8 @@ function HomePage(props) {
                   fontWeight: "bold",
                   fontSize: "15px",
                   marginRight: "200px",
-                  marginLeft: "30px"
+                  marginLeft: "30px",
+                  float: "left "
                 }}
               >
                 Live Events!
@@ -228,9 +229,11 @@ function HomePage(props) {
         Go Lions!
       </h2>
 
-      <Footer
-      // footer for the lindenwood pages, import from footer.js
-      />
+      <div style={{ position: "relative", paddingBottom: "60px" }}>
+        <Footer
+          style={{ position: "absolute", left: "0", right: "0", bottom: "0" }}
+        />
+      </div>
     </div>
   );
 }

@@ -8,6 +8,7 @@ import picture from "./story.jpg";
 import fball from "./LUFootball.jpg";
 import saac from "./SAAC.jpg";
 import NavLink from "./NavLink.js";
+import Footer from "./footer";
 
 const styles = theme => ({
   root: {
@@ -249,6 +250,12 @@ function CenteredGrid(props) {
         <NavLink to="/trainingDepartment">Athletics Training</NavLink>
         <NavLink to="/insurance">Insurance policy</NavLink>
       </Paper>
+      <br />
+      <div style={{ position: "relative", paddingBottom: "60px" }}>
+        <Footer
+          style={{ position: "absolute", left: "0", right: "0", bottom: "0" }}
+        />
+      </div>
     </div>
   );
 }

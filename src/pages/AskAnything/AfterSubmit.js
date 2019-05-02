@@ -1,6 +1,7 @@
 import React from "react";
 import "./ask.css";
 import MenuItem from "@material-ui/core/MenuItem";
+import Footer from "./footer";
 
 export default function AfterSubmit() {
   return (
@@ -34,6 +35,11 @@ export default function AfterSubmit() {
         {" "}
         Thank you for your question. Your question is awaiting an answer.
       </p>
+      <div style={{ position: "relative", paddingBottom: "60px" }}>
+        <Footer
+          style={{ position: "absolute", left: "0", right: "0", bottom: "0" }}
+        />
+      </div>
     </div>
   );
 }
