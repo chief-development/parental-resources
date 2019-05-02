@@ -44,7 +44,7 @@ function Handbook(props) {
       >
         Handbooks
       </h1>
-      <p style={{ fontSize: "20px", textAlign: "center" }}>
+      <p style={{ fontSize: "24px", textAlign: "center", fontWeight: "300" }}>
         Handbooks for the NCAA and student Life Sport.
       </p>
       <br />

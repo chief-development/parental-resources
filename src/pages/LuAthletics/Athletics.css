@@ -1,0 +1,24 @@
+.top-headlines {
+  color: black;
+  text-decoration: underline;
+}
+.top-headlines:hover {
+  color: #b3a272;
+  cursor: pointer;
+}
+
+.photo-story {
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.photo-saac {
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+}
