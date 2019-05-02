@@ -8,6 +8,7 @@ import {
   NotificationContainer,
   NotificationManager
 } from "react-notifications";
+import Footer from "./footer";
 
 function signout() {
   firebase.auth().signOut();
@@ -168,6 +169,11 @@ export default function NewAdmin() {
         </form>
         <br />
         <NotificationContainer />
+      </div>
+      <div style={{ position: "relative", paddingBottom: "60px" }}>
+        <Footer
+          style={{ position: "absolute", left: "0", right: "0", bottom: "0" }}
+        />
       </div>
     </div>
   );

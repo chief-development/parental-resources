@@ -12,8 +12,9 @@ export default function Footer() {
         height: "50px"
       }}
     >
-      © 2019 Copyright:
-      <a href="https://lindenwood.edu"> Lindenwood University</a>
+      © 2019
+      <a href="https://lindenwood.edu"> Lindenwood University </a>
+      209 South Kingshighway, St Charles, MO 63301
     </div>
   );
 }
