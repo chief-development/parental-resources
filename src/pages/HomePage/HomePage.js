@@ -122,8 +122,7 @@ function HomePage(props) {
                   fontWeight: "bold",
                   fontSize: "15px",
                   marginRight: "200px",
-                  marginLeft: "30px",
-                  float: "left "
+                  marginLeft: "30px"
                 }}
               >
                 Live Events!

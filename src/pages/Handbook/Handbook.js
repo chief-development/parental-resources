@@ -52,8 +52,7 @@ function Handbook(props) {
         style={{
           display: "flex",
           flexWrap: "wrap",
-          justifyContent: "space-around",
-          height: "1000px"
+          justifyContent: "space-around"
         }}
       >
         <div>
@@ -90,8 +89,37 @@ function Handbook(props) {
                 <ExpansionPanelDetails>
                   <Typography style={{ fontSize: "18px" }}>
                     <ul>
-                      <li>Fooball</li>
-                      <li>Hockey</li>
+                      <li>Men's and Women's Basketball</li>
+                      <li>Baseball</li>
+                      <li>Men's and Women's Cross Country</li>
+                      <li>Football</li>
+                      <li>Men's and Women's Golf</li>
+                      <li>Men's and Women's Lacrosse</li>
+                      <li>Men's and Women's Soccer</li>
+                      <li>Swimming and Diving</li>
+                      <li>Tennis</li>
+                      <li>Track and Field (Indoor and Outdoor)</li>
+                      <li>Men's and Women's Volleyball</li>
+                      <li>Men's Wrestling</li>
+                      <li>Women 's Field Hockey</li>
+                      <li>Gymnastics</li>
+                      <li>Softball</li>
+                      <li>Women's Wrestling</li>
+                      <li>Baseball</li>
+                      <li>Men's and Women's Cross Country</li>
+                      <li>Football</li>
+                      <li>Men's and Women's Golf</li>
+                      <li>Men's and Women's Lacrosse</li>
+                      <li>Men's and Women's Soccer</li>
+                      <li>Swimming and Diving</li>
+                      <li>Tennis</li>
+                      <li>Track and Field (Indoor and Outdoor)</li>
+                      <li>Men's and Women's Volleyball</li>
+                      <li>Men's Wrestling</li>
+                      <li>Women 's Field Hockey</li>
+                      <li>Gymnastics</li>
+                      <li>Softball</li>
+                      <li>Women's Wrestling</li>
                     </ul>
                   </Typography>
                 </ExpansionPanelDetails>
@@ -140,14 +168,28 @@ function Handbook(props) {
                     }}
                   >
                     {" "}
-                    Non-NCAA Sports
+                    Student Life Sports
                   </Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                   <Typography style={{ fontSize: "18px" }}>
                     <ul>
-                      <li>Fooball</li>
-                      <li>Hockey</li>
+                      <li>Billiards</li>
+                      <li>Men's and Women's Bowling</li>
+                      <li>Cheerleading</li>
+                      <li>Chess</li>
+                      <li>Men's and Women's Cycling</li>
+                      <li>Lion Line</li>
+                      <li>Lionettes</li>
+                      <li>Golden Line</li>
+                      <li>Men's ice Hockey</li>
+                      <li>Men's and Women's Olympic Weightlifting</li>
+                      <li>Roller Hockey</li>
+                      <li>Men's and Women's Rugby</li>
+                      <li>Men's and Women's Shotgun Sport</li>
+                      <li>Synchronized Swimming</li>
+                      <li>Men's and Women's Water Polo</li>
+                      <li>Women's Wrestling</li>
                     </ul>
                   </Typography>
                 </ExpansionPanelDetails>

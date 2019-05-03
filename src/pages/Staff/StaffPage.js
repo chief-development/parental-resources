@@ -17,7 +17,7 @@ export default function StaffPage() {
           lineHeight: "2",
           letterSpacing: "-2px",
           textShadow: "0px 2px 3px #555",
-          textAlign: "center"
+          marginTop: "-50px"
         }}
       >
         Staff
