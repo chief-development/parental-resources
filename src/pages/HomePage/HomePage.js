@@ -14,18 +14,27 @@ import PropTypes from "prop-types";
 import Camera from "@material-ui/icons/CameraAlt";
 import Avatar from "@material-ui/core/Avatar";
 import { SocialIcon } from "react-social-icons";
-import Paper from "@material-ui/core/Paper";
 import spiritShop from "./Background.jpg";
+import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
 
-const styles = {
+const styles = theme => ({
   card: {
     maxWidth: 750
   },
   media: {
     // ⚠️ object-fit is not supported by IE 11.
     objectFit: "cover"
+  },
+  root: {
+    flexGrow: 1
+  },
+  paper: {
+    padding: theme.spacing.unit * 2,
+    textAlign: "center",
+    backgroundColor: "transparent"
   }
-};
+});
 
 function HomePage(props) {
   const { classes } = props;
@@ -40,7 +49,7 @@ function HomePage(props) {
           fontSize: "80px", // size of the font 80 px
           color: "#b3a272", //color mustard yellow for the letters
           textShadow: "0px 2px 3px #555", // give a little shadow to the letters
-          textAlign: "center" // text set to the center
+          textAlign: "left" // text set to the center
         }}
       >
         Parental Resource Center
@@ -58,44 +67,47 @@ function HomePage(props) {
           height: "1000px"
         }}
       >
-        <div>
-          <h1
+        <Grid item xs={12}>
+          <Paper
+            className={classes.paper}
             style={{
-              color: "black",
-              textDecoration: "underline"
+              borderRadius: "20px",
+              marginBottom: "20px"
             }}
           >
-            Welcome
-          </h1>
-          <p
-            style={{
-              //style for the paragraph
-              left: "23%",
-              textAlign: "center", // set the text to the center
-              width: "700px", // set the width of the text
-              fontSize: "19px", // set size font of the letters
-              margin: "0px", // set margin
-              paddingTop: "40px", // set padding for the top
-              paddingBottom: "40px",
-              paddingLeft: "20px",
-              paddingRight: "20px",
-              color: "Black", // change color of the words to white
-              border: "solid lightgrey 1px",
-              borderRadius: "15px"
-            }}
-          >
-            Welcome to Parental Resources! Lindenwood University aims to help
-            both students and families when it comes to providing the necessary
-            information for its future lions. This new addition to Lindenwood's
-            growing website collection seeks to give relevant information to an
-            athlete's parents and students. We want to connect to our future
-            lions and their parents. Be sure to check out our Frequently Asked
-            Questions under the FAQ tab if you have any questions. And if your
-            question is not included, feel free to contact us via the contact
-            tab!
-          </p>
-        </div>
-
+            <h1
+              style={{
+                textDecoration: "underline",
+                fontWeight: "300",
+                color: "#b3a272",
+                textAlign: "center",
+                margin: "15px"
+              }}
+            >
+              Welcome Lindenwood Parents!
+            </h1>
+            <p
+              style={{
+                //style for the paragraph
+                textAlign: "center", // set the text to the center
+                fontSize: "19px", // set size font of the letters
+                margin: "0px", // set margin
+                borderRadius: "15px",
+                fontWeight: "300"
+              }}
+            >
+              Welcome to Parental Resources! Lindenwood University aims to help
+              both students and families when it comes to providing the
+              necessary information for its future lions. This new addition to
+              Lindenwood's growing website collection seeks to give relevant
+              information to an athlete's parents and students. We want to
+              connect to our future lions and their parents. Be sure to check
+              out our Frequently Asked Questions under the FAQ tab if you have
+              any questions. And if your question is not included, feel free to
+              contact us via the contact tab!
+            </p>
+          </Paper>
+        </Grid>
         <div>
           <Card className={classes.card}>
             <CardActionArea>

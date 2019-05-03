@@ -38,14 +38,14 @@ function Handbook(props) {
           lineHeight: "2",
           letterSpacing: "-2px",
           textShadow: "0px 2px 3px #555",
-          textAlign: "center",
+          textAlign: "left",
           marginTop: "-50px"
         }}
       >
         Handbooks
       </h1>
       <p style={{ fontSize: "24px", textAlign: "center", fontWeight: "300" }}>
-        Handbooks for the NCAA and student Life Sport.
+        Handbooks for the NCAA and Student Life Sport.
       </p>
       <br />
       <from
@@ -87,7 +87,13 @@ function Handbook(props) {
                   </Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
-                  <Typography style={{ fontSize: "18px" }}>
+                  <Typography
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: "300",
+                      letterSpacing: "-1px"
+                    }}
+                  >
                     <ul>
                       <li>Men's and Women's Basketball</li>
                       <li>Baseball</li>
@@ -172,7 +178,13 @@ function Handbook(props) {
                   </Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
-                  <Typography style={{ fontSize: "18px" }}>
+                  <Typography
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: "300",
+                      letterSpacing: "-1px"
+                    }}
+                  >
                     <ul>
                       <li>Billiards</li>
                       <li>Men's and Women's Bowling</li>

@@ -4,8 +4,6 @@ import moment from "moment";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
-import SearchIcon from "@material-ui/icons/Search";
-import InputBase from "@material-ui/core/InputBase";
 import Footer from "./footer";
 import "./faq.css";
 
@@ -109,7 +107,11 @@ export default function FAQ() {
         type="search"
         margin="normal"
         variant="outlined"
-        style={{ margin: "5px", width: "270px" }}
+        style={{
+          margin: "5px",
+          width: "270px",
+          backgroundColor: "white"
+        }}
         value={keywordInput}
         onChange={event => {
           const value = event.target.value;
@@ -127,7 +129,7 @@ export default function FAQ() {
         style={{
           margin: "5px",
           marginLeft: "20px",
-          backgounrdColor: "white",
+          backgroundColor: "white",
           width: "270px"
         }}
       >
