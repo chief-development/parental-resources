@@ -32,7 +32,7 @@ function CenteredGrid(props) {
             //style for the header of the home page
             lineHeight: "1",
             marginBottom: "13px",
-            marginTop: "13px",
+            marginTop: "-10px",
             letterSpacing: "-2px", // space between letters of -2 px
             padding: "10px", // padding around of 5 px
             fontSize: "80px", // size of the font 80 px
@@ -76,7 +76,7 @@ function CenteredGrid(props) {
               The{" "}
               <a
                 href="https://lindenwoodlions.com"
-                target="_blank"
+                target="__blank"
                 style={{ color: "black" }}
               >
                 {" "}

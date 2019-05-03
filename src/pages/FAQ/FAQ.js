@@ -86,7 +86,7 @@ export default function FAQ() {
           lineHeight: "2",
           letterSpacing: "-2px",
           textShadow: "0px 2px 3px #555",
-          textAlign: "left"
+          marginTop: "-50px"
         }}
       >
         FAQ
