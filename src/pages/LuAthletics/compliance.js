@@ -136,8 +136,10 @@ function HomePage(props) {
       <a href="https://lindenwoodlions.com/sb_output.aspx?form=5">
         Click here to fill out an athletics form
       </a>
-      <div style={{ width: "150px" }}>
-        <NavLink to="/athletics">Go Back!</NavLink>
+      <div style={{ width: "170px" }}>
+        <NavLink to="/athletics">
+          <p className="m-button">Go Back!</p>
+        </NavLink>
       </div>
       <div style={{ position: "relative", paddingBottom: "60px" }}>
         <Footer

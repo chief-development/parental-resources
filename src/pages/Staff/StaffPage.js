@@ -39,7 +39,7 @@ export default function StaffPage() {
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography style={{ fontSize: "18px" }}>
+          <Typography style={{ fontSize: "22px", fontWeight: "300" }}>
             <ul>
               {men.map((link, index) => {
                 return (
@@ -72,7 +72,7 @@ export default function StaffPage() {
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography style={{ fontSize: "18px" }}>
+          <Typography style={{ fontSize: "22px", fontWeight: "300" }}>
             <ul>
               {women.map((link, index) => {
                 return (
@@ -105,7 +105,7 @@ export default function StaffPage() {
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography style={{ fontSize: "18px" }}>
+          <Typography style={{ fontSize: "22px", fontWeight: "300" }}>
             <ul>
               {coed.map((link, index) => {
                 return (
@@ -138,7 +138,7 @@ export default function StaffPage() {
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography style={{ fontSize: "18px" }}>
+          <Typography style={{ fontSize: "22px", fontWeight: "300" }}>
             <ul>
               {otherStaff.map((link, index) => {
                 return (

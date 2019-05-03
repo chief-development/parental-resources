@@ -108,7 +108,10 @@ export default function AskAnything() {
         </h4>
 
         <hr
-          style={{ backgroundColor: "#b6a16b", borderTop: "1px double white" }}
+          style={{
+            backgroundColor: "#b6a16b",
+            borderTop: "1px double #b6a16b"
+          }}
         />
 
         <p
@@ -171,7 +174,7 @@ export default function AskAnything() {
             margin="normal"
             variant="outlined"
             style={{
-              backgounrdColor: "white"
+              marginBottom: "10px"
             }}
           >
             {categories.map(option => (

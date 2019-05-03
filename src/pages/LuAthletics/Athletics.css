@@ -22,3 +22,16 @@
   max-height: 100%;
   max-width: 100%;
 }
+
+.m-button {
+  background-color: #b3a272;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px;
+  margin: 1px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
