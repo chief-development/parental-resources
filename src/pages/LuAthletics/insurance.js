@@ -182,7 +182,9 @@ function HomePage(props) {
         </p>
       </form>
       <div style={{ width: "150px" }}>
-        <NavLink to="/athletics">Go Back!</NavLink>
+        <NavLink to="/athletics">
+          <p className="m-button">Go Back!</p>
+        </NavLink>
       </div>
       <div style={{ position: "relative", paddingBottom: "60px" }}>
         <Footer
