@@ -9,7 +9,8 @@ const styles = {
     textAlign: "left", // set the text to the center
     fontSize: "19px", // set size font of the letters
     margin: "0px", // set margin
-    paddingTop: "20px" // set padding for the top
+    paddingTop: "20px", // set padding for the top
+    paddingLeft: "30px"
   }
 };
 
@@ -26,13 +27,13 @@ function HomePage(props) {
           fontSize: "80px", // size of the font 80 px
           color: "#b3a272", //color mustard yellow for the letters
           textShadow: "0px 2px 3px #555", // give a little shadow to the letters
-          textAlign: "center", // text set to the center
+          textAlign: "left", // text set to the center
           flex: "1"
         }}
       >
         Insurance
       </h1>
-
+      <br />
       <hr
       //separation line
       />
@@ -174,11 +175,14 @@ function HomePage(props) {
       >
         <p className={classes.p} style={{ maxWidth: "400px" }}>
           Anna Girdwood: Assistant Athletics Director for Compliance Office
-          Phone: (636) 949-4654 Email: agirdwood@lindenwood.edu
+          <br />
+          Phone: (636) 949-4654 <br />
+          Email: agirdwood@lindenwood.edu
         </p>
         <p className={classes.p} style={{ maxWidth: "400px" }}>
-          Massey Arnold: Assistant Director for Compliance Office Phone: (636)
-          255-2216 Email: marnold@lindenwood.edu
+          Massey Arnold: Assistant Director for Compliance Office <br />
+          Phone: (636) 255-2216
+          <br /> Email: marnold@lindenwood.edu
         </p>
       </form>
       <div style={{ width: "150px" }}>

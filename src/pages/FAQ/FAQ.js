@@ -84,23 +84,14 @@ export default function FAQ() {
           lineHeight: "2",
           letterSpacing: "-2px",
           textShadow: "0px 2px 3px #555",
-          marginTop: "-50px"
+          marginTop: "-10px"
         }}
       >
         FAQ
       </h1>
-      {/*
-      <SearchIcon
-        style={{
-          color: "#b3a272",
-          position: "relative",
-          left: "33%",
-          top: "3%",
-          height: "25px",
-          width: "30px"
-        }}
-      />
-			*/}
+      <br />
+      <hr />
+
       <TextField
         id="outlined-search"
         label="Seach By Keyword"
@@ -139,8 +130,8 @@ export default function FAQ() {
           </MenuItem>
         ))}
       </TextField>
-      <hr />
-
+      <br />
+      <br />
       {questions.map((q, index) => {
         const { question, date_asked, category, answer } = q;
 

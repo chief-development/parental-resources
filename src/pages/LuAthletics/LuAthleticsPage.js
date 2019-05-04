@@ -45,7 +45,7 @@ function CenteredGrid(props) {
           Lindenwood Athletics
         </h1>
       </div>
-
+      <br />
       <hr />
       <img
         src={fball}
@@ -157,7 +157,7 @@ function CenteredGrid(props) {
               style={{
                 fontWeight: "300",
                 fontSize: "18px",
-                textAlign: "center"
+                textAlign: "left"
               }}
             >
               Lindenwood also offers a variety of sports outside of the NCAA,
@@ -179,7 +179,7 @@ function CenteredGrid(props) {
 
         <Grid item xs={12}>
           <Paper className={classes.paper} style={{ borderRadius: "15px" }}>
-            <h3>Trying to be a new Lindenwood Lion Athlete?</h3>
+            <h3>Interested in being a Lindenwood Athlete?</h3>
             <p
               style={{
                 fontWeight: "300",
@@ -210,7 +210,7 @@ function CenteredGrid(props) {
                 margin: "5px"
               }}
             >
-              Fill out our Recruiting form by{" "}
+              Recruiting forms are located by{" "}
               <a href="https://lindenwoodlions.com/sb_output.aspx?form=3">
                 <span className="top-headlines">Clicking Here!</span>
               </a>
@@ -222,7 +222,7 @@ function CenteredGrid(props) {
           <Paper className={classes.paper} style={{ borderRadius: "15px" }}>
             <img src={picture} alt="Banner" className="photo-story" />
             <h3 style={{ marginTop: "25px", marginBottom: "10px" }}>
-              Look at out Stories of our Athletes in Lindenwood University
+              Look at the Stories of our Athletes.
             </h3>
             <a
               className="top-headlines"
@@ -236,7 +236,7 @@ function CenteredGrid(props) {
                   fontWeight: "300"
                 }}
               >
-                Read Stories about our Lions!
+                Read their Stories!
               </p>
             </a>
           </Paper>
