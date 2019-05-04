@@ -242,13 +242,37 @@ function CenteredGrid(props) {
           </Paper>
         </Grid>
       </Grid>
-      <Paper className="links">
-        <h3 style={{ marginTop: "25px", marginBottom: "10px" }}>
+      <Paper
+        className={classes.paper}
+        style={{ borderRadius: "15px", marginTop: "20px" }}
+      >
+        <h3
+          style={{
+            fontWeight: "400",
+            fontSize: "28px",
+            textAlign: "center",
+            margin: "6px",
+            textDecoration: "underline"
+          }}
+        >
           Other options
         </h3>
-        <NavLink to="/compliance">Compliance</NavLink>
-        <NavLink to="/trainingDepartment">Athletics Training</NavLink>
-        <NavLink to="/insurance">Insurance policy</NavLink>
+        <NavLink to="/compliance">
+          <p style={{ fontSize: "19px" }}>
+            {" "}
+            <li> Compliance </li>
+          </p>
+        </NavLink>
+        <NavLink to="/trainingDepartment">
+          <p style={{ fontSize: "19px" }}>
+            <li> Athletics Training </li>
+          </p>
+        </NavLink>
+        <NavLink to="/insurance">
+          <p style={{ fontSize: "19px" }}>
+            <li> Insurance policy </li>
+          </p>
+        </NavLink>
       </Paper>
       <br />
       <div style={{ position: "relative", paddingBottom: "60px" }}>
