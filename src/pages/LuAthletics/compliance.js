@@ -3,6 +3,7 @@ import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 import Footer from "./footer";
 import NavLink from "./NavLink.js";
+import Paper from "@material-ui/core/Paper";
 
 const styles = {
   p: {
@@ -10,7 +11,8 @@ const styles = {
     textAlign: "left", // set the text to the center
     fontSize: "19px", // set size font of the letters
     margin: "0px", // set margin
-    paddingTop: "20px" // set padding for the top
+    paddingTop: "20px", // set padding for the top
+    paddingLeft: "20px"
   }
 };
 
@@ -33,7 +35,7 @@ function HomePage(props) {
       >
         Compliance
       </h1>
-
+      <br />
       <hr
       //separation line
       />
@@ -43,7 +45,7 @@ function HomePage(props) {
         style={{
           //style for the paragraph
 
-          paddingTop: "40px" // set padding for the top
+          paddingTop: "20px" // set padding for the top
         }}
       >
         Lindenwood University Athletics is dedicated and obligated to the
@@ -87,55 +89,40 @@ function HomePage(props) {
         </p>
       </form>
 
-      {/*pdf object of the concussion management policy and plan */}
-      <object
-        width="100%"
-        height="600px"
-        data="https://s3.amazonaws.com/sidearm.sites/lindenwoodlions.com/documents/2017/8/9/LU_Concussion_Management_Policy_and_Plan.pdf?date=1502296382#view=FitH@toolbar=1"
-        type="application/pdf"
-        class="embedded"
-        internalinstanceid="719"
-        flex="1"
+      <br />
+      <p
+        className={classes.paper}
+        style={{ borderRadius: "15px", marginTop: "20px" }}
       >
-        <p>Your document is ready to be downloaded.</p>
-      </object>
-      {/*pdf object of the drug testing policy */}
-      <object
-        width="100%"
-        height="600px"
-        data="https://s3.amazonaws.com/sidearm.sites/lindenwoodlions.com/documents/2014/4/8/Drug Testing Policy.pdf?date=1450368416#view=FitH@toolbar=1"
-        type="application/pdf"
-        class="embedded"
-        internalinstanceid="738"
-      >
-        <p>Your document is ready to be downloaded.</p>
-      </object>
-      {/*pdf object of the banned substance list*/}
-      <object
-        width="100%"
-        height="600px"
-        data="https://s3.amazonaws.com/sidearm.sites/lindenwoodlions.com/documents/2017/8/9/2017_18_NCAA_Banned_Drugs_20170605.pdf?date=1502296383#view=FitH@toolbar=1"
-        type="application/pdf"
-        class="embedded"
-        internalinstanceid="756"
-      >
-        <p>Your document is ready to be downloaded.</p>
-      </object>
-      {/*Do's and Don'ts pdf*/}
-      <object
-        width="100%"
-        height="600px"
-        data="https://s3.amazonaws.com/sidearm.sites/lindenwoodlions.com/documents/2018/6/21/Booster_Brochure.pdf?date=1529591041#view=FitH@toolbar=1"
-        type="application/pdf"
-        class="embedded"
-        internalinstanceid="824"
-      >
-        <p>Your document is ready to be downloaded.</p>
-      </object>
-
-      <a href="https://lindenwoodlions.com/sb_output.aspx?form=5">
-        Click here to fill out an athletics form
-      </a>
+        <h3
+          style={{
+            fontWeight: "400",
+            fontSize: "28px",
+            textAlign: "left",
+            margin: "6px",
+            textDecoration: "underline"
+          }}
+        >
+          Other links
+        </h3>
+        <NavLink to="/boostersBrochure">
+          <p style={{ fontSize: "19px" }}>
+            {" "}
+            <li> Do's and Dont's/ Rule of Thumb </li>
+          </p>
+        </NavLink>
+        <NavLink to="/trainingDepartment">
+          <p style={{ fontSize: "19px" }}>
+            <li> Athletic Training </li>
+          </p>
+        </NavLink>
+        <NavLink to="/insurance">
+          <p style={{ fontSize: "19px" }}>
+            <li> Insurance policy </li>
+          </p>
+        </NavLink>
+      </p>
+      <br />
       <div style={{ width: "170px" }}>
         <NavLink to="/athletics">
           <p className="m-button">Go Back!</p>

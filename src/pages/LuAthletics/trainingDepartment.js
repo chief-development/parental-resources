@@ -3,6 +3,11 @@ import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 import Footer from "./footer";
 import NavLink from "./NavLink.js";
+import photo1 from "./AthleticTrainingPhotos/Trainers.jpg";
+import photo2 from "./AthleticTrainingPhotos/JakeLandals2.jpg";
+import photo3 from "./AthleticTrainingPhotos/Lindenwood_5158.jpg";
+import GridList from "@material-ui/core/GridList";
+import Paper from "@material-ui/core/Paper";
 
 const styles = {
   p: {
@@ -11,6 +16,16 @@ const styles = {
     fontSize: "19px", // set size font of the letters
     margin: "0px", // set margin
     paddingTop: "20px" // set padding for the top
+  },
+  gridList: {
+    flexWrap: "wrap",
+    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
+    transform: "translateZ(0)"
+  },
+  paper: {
+    flexWrap: "wrap",
+    border: "none",
+    width: "75%"
   }
 };
 
@@ -27,13 +42,13 @@ function HomePage(props) {
           fontSize: "80px", // size of the font 80 px
           color: "#b3a272", //color mustard yellow for the letters
           textShadow: "0px 2px 3px #555", // give a little shadow to the letters
-          textAlign: "center", // text set to the center
+          textAlign: "left", // text set to the center
           flex: "1"
         }}
       >
         Athletic Training Department
       </h1>
-
+      <br />
       <hr
       //separation line
       />
@@ -73,7 +88,66 @@ function HomePage(props) {
         located in the Hyland Arena, Field House, Clubhouse, and the new Student
         Athlete Center (SAC).
       </p>
-      <div style={{ width: "150px" }}>
+      <br />
+      <br />
+      <GridList className={classes.gridList} cols={3}>
+        <img
+          src={photo1}
+          alt="Hunter Stadium"
+          style={{ width: "300px", height: "200px" }}
+        />
+        <img
+          src={photo2}
+          alt="Hunter Stadium"
+          style={{ width: "300px", height: "200px" }}
+        />
+        <img
+          src={photo3}
+          alt="Hunter Stadium"
+          style={{ width: "300px", height: "200px" }}
+        />
+        ))}
+      </GridList>
+      <br />
+      <p
+        className={classes.paper}
+        style={{
+          borderRadius: "0px",
+          marginTop: "0px",
+          backgroundColor: "#b8b3a5",
+          borderRadius: "15px"
+        }}
+      >
+        <h3
+          style={{
+            fontWeight: "400",
+            fontSize: "28px",
+            textAlign: "left",
+            margin: "6px",
+            textDecoration: "underline"
+          }}
+        >
+          Other cites
+        </h3>
+        <NavLink to="/banned_drugs">
+          <p style={{ fontSize: "19px" }}>
+            {" "}
+            <li> Banned Drugs </li>
+          </p>
+        </NavLink>
+        <NavLink to="/drug_testing_policy">
+          <p style={{ fontSize: "19px" }}>
+            <li> Drug testing policy </li>
+          </p>
+        </NavLink>
+        <NavLink to="/concussion_management_policy">
+          <p style={{ fontSize: "19px" }}>
+            <li> Concussion management policy </li>
+          </p>
+        </NavLink>
+      </p>
+      <br />
+      <div style={{ width: "300px" }}>
         <NavLink to="/athletics">
           <p className="m-button">Go Back!</p>
         </NavLink>

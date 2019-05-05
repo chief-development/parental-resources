@@ -17,15 +17,17 @@ export default function StaffPage() {
           lineHeight: "2",
           letterSpacing: "-2px",
           textShadow: "0px 2px 3px #555",
-          marginTop: "-50px"
+          marginTop: "-10px"
         }}
       >
         Staff
       </h1>
-      <p style={{ fontSize: "24px", textAlign: "center", fontWeight: "300" }}>
-        Here you can find the staff you are looking for. Click on the Category
-        and look for you future coaches!
+      <br />
+      <hr />
+      <p style={{ fontSize: "24px", textAlign: "left", fontWeight: "300" }}>
+        Find your staff. Click on the sport category to see our coaches.
       </p>
+      <br />
       <ExpansionPanel style={{ padding: "2px", margin: "10px" }}>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <Typography
