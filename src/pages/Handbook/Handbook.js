@@ -220,7 +220,7 @@ function Handbook(props) {
               </ExpansionPanel>
               <Button
                 size="small"
-                href="https://lindenwoodlions.com/documents/2018/9/24/SLS_Student_Athlete_Handbook_SLS_.pdf"
+                href="/SLS_handbook"
                 target="__blank"
                 style={{
                   color: "#b3a272",

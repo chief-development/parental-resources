@@ -88,7 +88,6 @@ export default function FAQ() {
       >
         FAQ
       </h1>
-      <br />
       <hr />
 
       <TextField
