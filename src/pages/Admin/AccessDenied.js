@@ -1,5 +1,4 @@
 import React from "react";
-import MenuItem from "@material-ui/core/MenuItem";
 
 export default function AccessDenied() {
   return (
@@ -12,7 +11,7 @@ export default function AccessDenied() {
           fontSize: "25px"
         }}
       >
-        Access Denied
+        Log out Succesfully
       </h4>
 
       <hr
