@@ -1,9 +1,5 @@
 import React from "react";
 import "./admin.css";
-import TextField from "@material-ui/core/TextField";
-import MenuItem from "@material-ui/core/MenuItem";
-import SearchIcon from "@material-ui/icons/Search";
-import InputBase from "@material-ui/core/InputBase";
 import Divider from "@material-ui/core/Divider";
 import { Link } from "react-router-dom";
 import { db } from "../../firebase/index";
@@ -16,75 +12,12 @@ import {
   NotificationManager
 } from "react-notifications";
 
-/*
-const categories = [
-  {
-    value: "Academic Success",
-    label: "Academic Success"
-  },
-  {
-    value: "Athletic Communication",
-    label: "Athletic Communication"
-  },
-  {
-    value: "Athletic Performance",
-    label: "Athletic Performance"
-  },
-  {
-    value: "Athletic Training",
-    label: "Athletic Training"
-  },
-  {
-    value: "IC. NCAA Compliance",
-    label: "IC. NCAA Compliance"
-  },
-  {
-    value: "GameDay, Events and Operations",
-    label: "GameDay, Events and Operations"
-  },
-  {
-    value: "NCAA Rules",
-    label: "NCAA Rules"
-  },
-  {
-    value: "Other",
-    label: "Other"
-  }
-];
-
-const sorting = [
-  {
-    value: "mostRes",
-    label: "Most Recent"
-  },
-  {
-    value: "mostPop",
-    label: "Most Popular"
-  }
-];
-
-*/
-
 function signout() {
   firebase.auth().signOut();
   window.location = "/login";
 }
 
 export default function Admin() {
-  {
-    /*       
-    const [values, setValues] = React.useState({
-    categories: "Academic Success",
-    sorting: "mostRes"
-  });
-
-
-  const handleChange = name => event => {
-    setValues({ ...values, [name]: event.target.value });
-  };
-*/
-  }
-
   let user = firebase.auth().currentUser; //get current signed in user
   //if there is no signed in user, redirect out of admin portal
   firebase.auth().onAuthStateChanged(function(user) {
@@ -127,12 +60,12 @@ export default function Admin() {
       </span>
       <h1
         style={{
-          fontSize: "80px",
-          color: "#b3a272",
-          lineHeight: "2",
-          letterSpacing: "-2px",
-          textShadow: "0px 2px 3px #555",
-          textAlign: "left"
+          lineHeight: "1",
+          letterSpacing: "-2px", // space between letters of -2 px
+          padding: "5px", // padding around of 5 px
+          fontSize: "80px", // size of the font 80 px
+          color: "#b3a272", //color mustard yellow for the letters
+          textShadow: "0px 2px 3px #555" // give a little shadow to the letters
         }}
       >
         Admin Portal
@@ -183,67 +116,6 @@ export default function Admin() {
           backgroundColor: "white"
         }}
       >
-        {/*
-        <TextField
-          id="category"
-          select
-          label="Select"
-          value={values.categories}
-          onChange={handleChange("categories")}
-          helperText="Filter Question by Category"
-          margin="normal"
-          variant="outlined"
-          style={{ margin: "40px" }}
-        >
-          {categories.map(option => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
-
-        <TextField
-          id="sorting"
-          select
-          label="Select"
-          value={values.sorting}
-          onChange={handleChange("sorting")}
-          helperText="Sort Question by:"
-          margin="normal"
-          variant="outlined"
-          style={{ margin: "40px" }}
-        >
-          {sorting.map(option => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
-
-        <SearchIcon
-          style={{
-            color: "#b3a272",
-            position: "relative",
-            left: "4%",
-            height: "20px",
-            width: "30px"
-          }}
-        />
-        <InputBase placeholder="Search…" style={{ margin: "40px" }} />
-
-        <Button
-          variant="outlined"
-          color="black"
-          style={{
-            height: "50px",
-            margin: "40px"
-          }}
-        >
-          Go
-        </Button>
-        
-        */}
-
         <br />
         <form id="questionset">
           {questions.map((q, index) => {

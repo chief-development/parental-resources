@@ -11,21 +11,23 @@ export default function StaffPage() {
     <>
       <h1
         style={{
-          //style for the header
-          fontSize: "80px",
-          color: "#b3a272",
-          lineHeight: "2",
-          letterSpacing: "-2px",
-          textShadow: "0px 2px 3px #555",
-          marginTop: "-50px"
+          //style for the header of the home page
+          lineHeight: "1",
+          letterSpacing: "-2px", // space between letters of -2 px
+          fontSize: "80px", // size of the font 80 px
+          color: "#b3a272", //color mustard yellow for the letters
+          textShadow: "0px 2px 3px #555" // give a little shadow to the letters
         }}
       >
         Staff
       </h1>
-      <p style={{ fontSize: "24px", textAlign: "center", fontWeight: "300" }}>
-        Here you can find the staff you are looking for. Click on the Category
-        and look for you future coaches!
+
+      <hr />
+
+      <p style={{ fontSize: "24px", textAlign: "left", fontWeight: "300" }}>
+        Find your staff. Click on the sport category to see our coaches.
       </p>
+      <br />
       <ExpansionPanel style={{ padding: "2px", margin: "10px" }}>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <Typography

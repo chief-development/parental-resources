@@ -136,7 +136,7 @@ export default function AskAnything() {
             id="name"
             name="name"
             className="inputs-ask"
-            placeholder="Your name.."
+            placeholder="Your name"
             required
             value={askedBy_nameInput}
             onChange={event => {
@@ -195,7 +195,7 @@ export default function AskAnything() {
             className="inputs-ask"
             id="subject"
             name="subject"
-            placeholder="Write something.."
+            placeholder=""
             required
             value={questionInput}
             onChange={event => {

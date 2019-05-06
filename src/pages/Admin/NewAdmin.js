@@ -35,12 +35,12 @@ export default function NewAdmin() {
       </span>
       <h1
         style={{
-          fontSize: "80px",
-          color: "#b3a272",
-          lineHeight: "2",
-          letterSpacing: "-2px",
-          textShadow: "0px 2px 3px #555",
-          textAlign: "left"
+          lineHeight: "1",
+          letterSpacing: "-2px", // space between letters of -2 px
+          padding: "5px", // padding around of 5 px
+          fontSize: "80px", // size of the font 80 px
+          color: "#b3a272", //color mustard yellow for the letters
+          textShadow: "0px 2px 3px #555" // give a little shadow to the letters
         }}
       >
         Admin Portal
@@ -102,7 +102,10 @@ export default function NewAdmin() {
         </h4>
 
         <hr
-          style={{ backgroundColor: "#b6a16b", borderTop: "px double #b6a16b" }}
+          style={{
+            backgroundColor: "#b6a16b",
+            borderTop: "px double #b6a16b"
+          }}
         />
 
         <p style={{ fontSize: "18px", textAlign: "center" }}>

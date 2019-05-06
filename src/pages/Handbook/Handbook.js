@@ -32,22 +32,30 @@ function Handbook(props) {
     <div>
       <h1
         style={{
-          //style for the header
-          fontSize: "80px",
-          color: "#b3a272",
-          lineHeight: "2",
-          letterSpacing: "-2px",
-          textShadow: "0px 2px 3px #555",
-          textAlign: "left",
-          marginTop: "-50px"
+          lineHeight: "1",
+          letterSpacing: "-2px", // space between letters of -2 px
+          padding: "5px", // padding around of 5 px
+          fontSize: "80px", // size of the font 80 px
+          color: "#b3a272", //color mustard yellow for the letters
+          textShadow: "0px 2px 3px #555" // give a little shadow to the letters
         }}
       >
         Handbooks
       </h1>
-      <p style={{ fontSize: "24px", textAlign: "center", fontWeight: "300" }}>
-        Handbooks for the NCAA and Student Life Sport.
+
+      <hr />
+      {/*
+      This is the paragraph above the two handbook cards. Change the text or size of the text below
+      */}
+      <p style={{ fontSize: "24px", textAlign: "left", fontWeight: "300" }}>
+        Lindenwood strives to keep it's athletes and their families familiarized
+        with the rules and regulations Lindenwood and the NCAA or student life
+        sports administrators require for all althletes. Down below are the two
+        handbooks our lions need in order to stay linked with their sport!
       </p>
+      {/*The break tag seperates the components without including a visible line through the page */}
       <br />
+
       <from
         style={{
           display: "flex",
@@ -56,6 +64,10 @@ function Handbook(props) {
         }}
       >
         <div>
+          {/*
+          Cards are like containers that have various capabilities like including buttons, text, etc. 
+          Each card is a seperate container but the ability to change the contents are down below
+          */}
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia component="img" alt="LU" height="360" src={NCAA} />
@@ -132,7 +144,7 @@ function Handbook(props) {
               </ExpansionPanel>
               <Button
                 size="small"
-                href="https://lindenwoodlions.com/documents/2018/9/25/NCAA_2018_19_Student_Athlete_Handbook.pdf"
+                href="/NCAA_handbook"
                 target="__blank"
                 style={{
                   color: "#b3a272",
@@ -208,7 +220,7 @@ function Handbook(props) {
               </ExpansionPanel>
               <Button
                 size="small"
-                href="https://lindenwoodlions.com/documents/2018/9/24/SLS_Student_Athlete_Handbook_SLS_.pdf"
+                href="/SLS_handbook"
                 target="__blank"
                 style={{
                   color: "#b3a272",
