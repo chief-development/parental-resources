@@ -11,7 +11,7 @@ export default function AccessDenied() {
           fontSize: "25px"
         }}
       >
-        Log out Succesfully
+        Please Log In
       </h4>
 
       <hr

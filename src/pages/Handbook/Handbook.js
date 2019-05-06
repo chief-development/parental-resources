@@ -42,7 +42,7 @@ function Handbook(props) {
       >
         Handbooks
       </h1>
-      <br />
+
       <hr />
       {/*
       This is the paragraph above the two handbook cards. Change the text or size of the text below

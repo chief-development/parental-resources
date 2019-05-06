@@ -1,9 +1,5 @@
 import React from "react";
 import "./admin.css";
-import TextField from "@material-ui/core/TextField";
-import MenuItem from "@material-ui/core/MenuItem";
-import SearchIcon from "@material-ui/icons/Search";
-import InputBase from "@material-ui/core/InputBase";
 import Divider from "@material-ui/core/Divider";
 import { Link } from "react-router-dom";
 import { db } from "../../firebase/index";

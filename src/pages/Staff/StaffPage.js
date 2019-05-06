@@ -21,7 +21,7 @@ export default function StaffPage() {
       >
         Staff
       </h1>
-      <br />
+
       <hr />
 
       <p style={{ fontSize: "24px", textAlign: "left", fontWeight: "300" }}>

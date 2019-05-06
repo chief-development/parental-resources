@@ -53,7 +53,6 @@ function HomePage(props) {
         >
           Parental Resource Center
         </h1>
-        <br />
         <hr
         //separation line
         />
