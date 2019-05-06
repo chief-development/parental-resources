@@ -14,7 +14,6 @@ import AnsweredQuestions from "./pages/Admin/AnsweredQuestions";
 import AccessDenied from "./pages/Admin/AccessDenied";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./layouts/MainLayout";
-import { db } from "./firebase";
 import "react-notifications/lib/notifications.css";
 import Compliance from "./pages/LuAthletics/compliance";
 import TrainingDeparment from "./pages/LuAthletics/trainingDepartment";

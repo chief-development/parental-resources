@@ -16,11 +16,10 @@ import Avatar from "@material-ui/core/Avatar";
 import { SocialIcon } from "react-social-icons";
 import spiritShop from "./Background.jpg";
 import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
 
 const styles = theme => ({
   card: {
-    maxWidth: 750
+    maxWidth: 600
   },
   media: {
     // ⚠️ object-fit is not supported by IE 11.
@@ -49,24 +48,17 @@ function HomePage(props) {
             padding: "5px", // padding around of 5 px
             fontSize: "80px", // size of the font 80 px
             color: "#b3a272", //color mustard yellow for the letters
-            textShadow: "0px 2px 3px #555", // give a little shadow to the letters
-            textAlign: "left" // text set to the center
+            textShadow: "0px 2px 3px #555" // give a little shadow to the letters
           }}
         >
           Parental Resource Center
         </h1>
-        <br />
+
         <hr
         //separation line
         />
 
-        <from
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-around"
-          }}
-        >
+        <from>
           <Paper
             className={classes.paper}
             style={{
@@ -88,12 +80,11 @@ function HomePage(props) {
             <p
               style={{
                 //style for the paragraph
-                textAlign: "center", // set the text to the center
+                textAlign: "justify", // set the text to the justify
                 fontSize: "19px", // set size font of the letters
                 margin: "15px", // set margin
                 borderRadius: "15px",
-                fontWeight: "300",
-                textAlign: "left"
+                fontWeight: "300"
               }}
             >
               Welcome to the Parent Resources! Lindenwood University aims to
@@ -110,7 +101,13 @@ function HomePage(props) {
             </p>
           </Paper>
 
-          <div>
+          <form
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-around"
+            }}
+          >
             <Card className={classes.card}>
               <CardActionArea>
                 <CardMedia component="img" alt="LU" height="350" src={oneR} />
@@ -233,7 +230,7 @@ function HomePage(props) {
                 </Button>
               </CardActions>
             </Card>
-          </div>
+          </form>
         </from>
       </div>
       <hr />

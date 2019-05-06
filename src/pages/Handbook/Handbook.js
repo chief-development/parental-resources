@@ -32,19 +32,17 @@ function Handbook(props) {
     <div>
       <h1
         style={{
-          //style for the header
-          fontSize: "80px",
-          color: "#b3a272",
-          lineHeight: "2",
-          letterSpacing: "-2px",
-          textShadow: "0px 2px 3px #555",
-          textAlign: "left",
-          marginTop: "-30px"
+          lineHeight: "1",
+          letterSpacing: "-2px", // space between letters of -2 px
+          padding: "5px", // padding around of 5 px
+          fontSize: "80px", // size of the font 80 px
+          color: "#b3a272", //color mustard yellow for the letters
+          textShadow: "0px 2px 3px #555" // give a little shadow to the letters
         }}
       >
         Handbooks
       </h1>
-      <br />
+
       <hr />
       {/*
       This is the paragraph above the two handbook cards. Change the text or size of the text below
@@ -222,7 +220,7 @@ function Handbook(props) {
               </ExpansionPanel>
               <Button
                 size="small"
-                href="https://lindenwoodlions.com/documents/2018/9/24/SLS_Student_Athlete_Handbook_SLS_.pdf"
+                href="/SLS_handbook"
                 target="__blank"
                 style={{
                   color: "#b3a272",

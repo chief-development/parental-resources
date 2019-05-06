@@ -45,7 +45,7 @@ function CenteredGrid(props) {
           Lindenwood Athletics
         </h1>
       </div>
-      <br />
+
       <hr />
       <img
         src={fball}

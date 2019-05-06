@@ -1,7 +1,6 @@
 import React from "react";
 import { db } from "../../firebase/index";
 import moment from "moment";
-import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 import Footer from "./footer";
@@ -79,17 +78,16 @@ export default function FAQ() {
     <div>
       <h1
         style={{
-          fontSize: "80px",
-          color: "#b3a272",
-          lineHeight: "2",
-          letterSpacing: "-2px",
-          textShadow: "0px 2px 3px #555",
-          marginTop: "-10px"
+          lineHeight: "1",
+          letterSpacing: "-2px", // space between letters of -2 px
+          padding: "5px", // padding around of 5 px
+          fontSize: "80px", // size of the font 80 px
+          color: "#b3a272", //color mustard yellow for the letters
+          textShadow: "0px 2px 3px #555" // give a little shadow to the letters
         }}
       >
         FAQ
       </h1>
-      <br />
       <hr />
 
       <TextField
