@@ -142,6 +142,7 @@ Each card is a seperate container but the ability to change the contents are dow
                   </Typography>
                 </ExpansionPanelDetails>
               </ExpansionPanel>
+              {/*Button inside the Expansion panel*/}
               <Button
                 size="small"
                 href="/NCAA_handbook"
@@ -218,6 +219,7 @@ Each card is a seperate container but the ability to change the contents are dow
                   </Typography>
                 </ExpansionPanelDetails>
               </ExpansionPanel>
+              {/*Button for expansion panel*/}
               <Button
                 size="small"
                 href="/SLS_handbook"

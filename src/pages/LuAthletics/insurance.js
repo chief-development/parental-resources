@@ -185,7 +185,7 @@ function HomePage(props) {
           <br /> Email: marnold@lindenwood.edu
         </p>
       </form>
-      <div style={{ width: "150px" }}>
+      <div style={{ width: "300px" }}>
         <NavLink to="/athletics">
           <p className="m-button">Go Back!</p>
         </NavLink>

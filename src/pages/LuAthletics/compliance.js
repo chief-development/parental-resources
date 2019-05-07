@@ -19,6 +19,7 @@ function HomePage(props) {
   const { classes } = props;
   return (
     <div>
+      {/*Header for Compliance*/}
       <h1
         style={{
           //style for the header of the home page
@@ -89,6 +90,7 @@ function HomePage(props) {
       </form>
 
       <br />
+      {/*More options to navigate*/}
       <p className="more-links">
         <h3
           style={{
@@ -119,7 +121,8 @@ function HomePage(props) {
         </NavLink>
       </p>
       <br />
-      <div style={{ width: "170px" }}>
+
+      <div style={{ width: "300px" }}>
         <NavLink to="/athletics">
           <p className="m-button">Go Back!</p>
         </NavLink>
