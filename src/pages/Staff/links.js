@@ -1,7 +1,7 @@
 export const men = [
   // array of the links for the diferent men coach's sports
   {
-    text: "Swimimng and Diving",
+    text: "Swimming and Diving",
     href: "https://lindenwoodlions.com/sports/2014/7/21/MSWIM_0721142822.aspx"
   },
   {
@@ -75,7 +75,7 @@ export const men = [
 export const women = [
   // array of the links for the diferent women coach's sports
   {
-    text: "Swimimng and Diving",
+    text: "Swimming and Diving",
     href: "https://lindenwoodlions.com/sports/2014/7/21/MSWIM_0721142822.aspx" //
   },
   {
