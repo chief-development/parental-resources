@@ -50,7 +50,7 @@ function HomePage(props) {
         <p>Your document is ready to be downloaded.</p>
       </object>
 
-      <div style={{ width: "170px" }}>
+      <div style={{ width: "300px" }}>
         <NavLink to="/compliance">
           <p className="m-button">Go Back!</p>
         </NavLink>

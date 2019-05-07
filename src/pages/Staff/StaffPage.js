@@ -9,6 +9,7 @@ import Footer from "./footer";
 export default function StaffPage() {
   return (
     <>
+      {/*Header for the Staff Page*/}
       <h1
         style={{
           //style for the header of the home page
@@ -28,8 +29,11 @@ export default function StaffPage() {
         Find your staff. Click on the sport category to see our coaches.
       </p>
       <br />
+      {/*Expansion Panel where the information is hold*/}
       <ExpansionPanel style={{ padding: "2px", margin: "10px" }}>
+        {/*Expansion Panel Summary with expand icon*/}
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+          {/*Expansion Panel Typography*/}
           <Typography
             style={{
               fontSize: "25px",
@@ -42,6 +46,7 @@ export default function StaffPage() {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography style={{ fontSize: "22px", fontWeight: "300" }}>
+            {/*Adding all the links to the expansion panels, this links are found in link.js*/}
             <ul>
               {men.map((link, index) => {
                 return (
