@@ -35,3 +35,10 @@
   display: inline-block;
   cursor: pointer;
 }
+
+.more-links {
+  width: "100%";
+  padding: "25px";
+  background-color: rgba(182, 161, 107, 0.2);
+  border-radius: 15px;
+}

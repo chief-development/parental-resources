@@ -45,9 +45,9 @@ function Handbook(props) {
 
       <hr />
       {/*
-      This is the paragraph above the two handbook cards. Change the text or size of the text below
-      */}
-      <p style={{ fontSize: "24px", textAlign: "left", fontWeight: "300" }}>
+This is the paragraph above the two handbook cards. Change the text or size of the text below
+*/}
+      <p style={{ fontSize: "18px", textAlign: "justify", fontWeight: "300" }}>
         Lindenwood strives to keep it's athletes and their families familiarized
         with the rules and regulations Lindenwood and the NCAA or student life
         sports administrators require for all althletes. Down below are the two
@@ -65,9 +65,9 @@ function Handbook(props) {
       >
         <div>
           {/*
-          Cards are like containers that have various capabilities like including buttons, text, etc. 
-          Each card is a seperate container but the ability to change the contents are down below
-          */}
+Cards are like containers that have various capabilities like including buttons, text, etc.
+Each card is a seperate container but the ability to change the contents are down below
+*/}
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia component="img" alt="LU" height="360" src={NCAA} />

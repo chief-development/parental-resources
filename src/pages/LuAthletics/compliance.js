@@ -3,7 +3,6 @@ import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 import Footer from "./footer";
 import NavLink from "./NavLink.js";
-import Paper from "@material-ui/core/Paper";
 
 const styles = {
   p: {
@@ -90,20 +89,17 @@ function HomePage(props) {
       </form>
 
       <br />
-      <p
-        className={classes.paper}
-        style={{ borderRadius: "15px", marginTop: "20px" }}
-      >
+      <p className="more-links">
         <h3
           style={{
             fontWeight: "400",
             fontSize: "28px",
-            textAlign: "left",
+            textAlign: "center",
             margin: "6px",
             textDecoration: "underline"
           }}
         >
-          Other links
+          Other Options
         </h3>
         <NavLink to="/boostersBrochure">
           <p style={{ fontSize: "19px" }}>

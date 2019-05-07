@@ -3,6 +3,7 @@ import React from "react";
 export default function AccessDenied() {
   return (
     <div className="accessDenied">
+      {/*Page when you sign Out from the portal*/}
       <br />
       <h4
         style={{

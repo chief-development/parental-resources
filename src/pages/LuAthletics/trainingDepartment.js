@@ -7,7 +7,6 @@ import photo1 from "./AthleticTrainingPhotos/Trainers.jpg";
 import photo2 from "./AthleticTrainingPhotos/JakeLandals2.jpg";
 import photo3 from "./AthleticTrainingPhotos/Lindenwood_5158.jpg";
 import GridList from "@material-ui/core/GridList";
-import Paper from "@material-ui/core/Paper";
 
 const styles = {
   p: {
@@ -48,7 +47,6 @@ function HomePage(props) {
       >
         Athletic Training Department
       </h1>
-      <br />
       <hr
       //separation line
       />
@@ -109,25 +107,17 @@ function HomePage(props) {
         ))}
       </GridList>
       <br />
-      <p
-        className={classes.paper}
-        style={{
-          borderRadius: "0px",
-          marginTop: "0px",
-          backgroundColor: "#b8b3a5",
-          borderRadius: "15px"
-        }}
-      >
+      <p className="more-links">
         <h3
           style={{
             fontWeight: "400",
             fontSize: "28px",
-            textAlign: "left",
+            textAlign: "center",
             margin: "6px",
             textDecoration: "underline"
           }}
         >
-          Other cites
+          Other Options
         </h3>
         <NavLink to="/banned_drugs">
           <p style={{ fontSize: "19px" }}>

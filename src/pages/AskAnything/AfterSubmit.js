@@ -1,11 +1,11 @@
 import React from "react";
 import "./ask.css";
-import MenuItem from "@material-ui/core/MenuItem";
 import Footer from "./footer";
 
 export default function AfterSubmit() {
   return (
     <div className="askForm">
+      {/*Page where the user get redirected after sending a question*/}
       <h3
         style={{
           fontSize: "65px",

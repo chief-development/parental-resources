@@ -1,7 +1,6 @@
 import React from "react";
 import "./login.css";
 import LuLogo from "./LU_Logo.png";
-import { Link } from "react-router-dom";
 import Footer from "./footer";
 import firebase from "firebase";
 export default function LogIn() {
@@ -13,6 +12,7 @@ export default function LogIn() {
     }
   });
 
+  //Initializes variables for the email and password fields
   const [emailInput, setemailInput] = React.useState("");
   const [passInput, setpassInput] = React.useState("");
 
@@ -22,12 +22,14 @@ export default function LogIn() {
       onKeyPress={event => keyPressed(event, emailInput, passInput)}
     >
       <div className="loginForm">
+        {/*Log in Form*/}
         <div className="imgcontainer">
           <img src={LuLogo} alt="Avatar" className="avatar" />
         </div>
         <br />
         <br />
         <br />
+        {/*Admin Portal Title*/}
         <h2
           className="logInTittle"
           style={{
@@ -40,8 +42,12 @@ export default function LogIn() {
         >
           Admin Portal
         </h2>
-
+        {/*Container to log in and inputs*/}
         <div class="container-login">
+          <p style={{ fontSize: "10px", fontWeight: "200" }}>
+            *Tool just for administrators of this website.
+          </p>
+          {/*Label for the username input field*/}
           <label
             style={{
               color: "#b3a272",
@@ -52,6 +58,7 @@ export default function LogIn() {
             Username
           </label>
           <br />
+          {/*Input for the email field*/}
           <input
             className="inputs"
             type="text"
@@ -74,7 +81,7 @@ export default function LogIn() {
             }}
           />
           <br />
-
+          {/*Label for the password input field*/}
           <label
             style={{
               color: "#b3a272",
@@ -85,6 +92,7 @@ export default function LogIn() {
             Password
           </label>
           <br />
+          {/*input field for the password*/}
           <input
             className="inputs"
             type="password"
@@ -108,6 +116,7 @@ export default function LogIn() {
           />
           <br />
 
+          {/*Log in Button*/}
           <button
             type="submit"
             onClick={() => login(emailInput, passInput)}
@@ -117,6 +126,7 @@ export default function LogIn() {
             Login
           </button>
 
+          {/*Link in case administrator forgets password*/}
           <a
             style={{ marginLeft: "10px", color: "#007bff" }}
             className="forgotPasswordLink"
@@ -136,6 +146,7 @@ export default function LogIn() {
   );
 }
 
+//Log in Function that holds two arguments emailInput and passInput
 function login(emailInput, passInput) {
   //try to sign in
   firebase
@@ -151,13 +162,14 @@ function login(emailInput, passInput) {
       var errorMessage = error.message;
       // [START_EXCLUDE]
       if (errorCode === "auth/wrong-password") {
-        alert("Wrong password.");
+        alert("Wrong password");
       } else {
         alert(errorMessage);
       }
     });
 }
 
+//forgotPassword function that takes one argument
 function forgotPassword(emailInput) {
   //send reset password email
   firebase
@@ -180,6 +192,7 @@ function forgotPassword(emailInput) {
     });
 }
 
+//function KeyPressed that takes three arguments event, emailInput, and pass Input
 function keyPressed(event, emailInput, passInput) {
   if (event.key === "Enter") {
     login(emailInput, passInput);
