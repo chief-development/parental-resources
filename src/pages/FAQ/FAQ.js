@@ -6,6 +6,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Footer from "./footer";
 import "./faq.css";
 
+//Array for the Categories the user can select
 const categories = [
   {
     value: "",
@@ -46,6 +47,7 @@ const categories = [
 ];
 
 export default function FAQ() {
+  //Variable for KeyWord Inputted by user
   const [keywordInput, setKeywordInput] = React.useState("");
 
   let searchindex = 0; //index for searching through q/a and searching for searched string
@@ -90,6 +92,7 @@ export default function FAQ() {
       </h1>
       <hr />
 
+      {/* Text Field to Search by Keyword, below with they styling and args*/}
       <TextField
         id="outlined-search"
         label="Seach By Keyword"
@@ -107,7 +110,7 @@ export default function FAQ() {
           setKeywordInput(value);
         }}
       />
-
+      {/*Text Field with categories*/}
       <TextField
         id="category"
         select
@@ -122,6 +125,7 @@ export default function FAQ() {
           width: "270px"
         }}
       >
+        {/*Maps the categories to the TextField*/}
         {categories.map(option => (
           <MenuItem key={option.value} value={option.value}>
             {option.label}
@@ -141,6 +145,9 @@ export default function FAQ() {
         var askdate;
         var cat;
 
+        {
+          /*Searches the questions by the category chosen by user*/
+        }
         if (values.categories != "") {
           if (
             questions[searchindex].category == values.categories &&
@@ -190,6 +197,9 @@ export default function FAQ() {
                 <hr />
               </div>
             );
+          }
+          {
+            /*Searches by the key word inputted by user*/
           }
         } else if (keywordInput != "") {
           if (
@@ -273,6 +283,7 @@ export default function FAQ() {
         }
         searchindex++;
       })}
+      {/*Footer in FAQ page*/}
       <Footer />
     </div>
   );

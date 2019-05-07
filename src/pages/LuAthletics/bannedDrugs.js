@@ -3,11 +3,6 @@ import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 import Footer from "./footer";
 import NavLink from "./NavLink.js";
-import photo1 from "./AthleticTrainingPhotos/Trainers.jpg";
-import photo2 from "./AthleticTrainingPhotos/JakeLandals2.jpg";
-import photo3 from "./AthleticTrainingPhotos/Lindenwood_5158.jpg";
-import GridList from "@material-ui/core/GridList";
-import Paper from "@material-ui/core/Paper";
 
 const styles = {
   p: {

@@ -6,6 +6,7 @@ import { db } from "../../firebase/index";
 import { Link } from "react-router-dom";
 import Footer from "./footer";
 
+//categories array
 const categories = [
   {
     value: "Academic Success",
@@ -41,6 +42,9 @@ const categories = [
   }
 ];
 
+{
+  /*Sends question to the DataBase with the information inputted by the user*/
+}
 export function sendQuestion(
   category,
   questionInput,
@@ -63,19 +67,30 @@ export function sendQuestion(
 }
 
 export default function AskAnything() {
+  {
+    /*initializes variables, for the question, name and email*/
+  }
   const [questionInput, setquestionInput] = React.useState("");
   const [askedBy_emailInput, setaskedBy_emailInput] = React.useState("");
   const [askedBy_nameInput, setaskedBy_nameInput] = React.useState("");
 
+  {
+    /*prevents questions with missing information*/
+  }
   const isEnabled =
     askedBy_emailInput.length > 0 &&
     askedBy_nameInput.length > 0 &&
     questionInput.length > 0;
 
+  {
+    /*initializes the category Academic Success as default*/
+  }
   const [values, setValues] = React.useState({
     categories: "Academic Success"
   });
-
+  {
+    /*Handle the changes of the text field with the categories*/
+  }
   const handleChange = name => event => {
     setValues({ ...values, [name]: event.target.value });
   };
@@ -83,6 +98,7 @@ export default function AskAnything() {
   return (
     <div className="askForm-bg">
       <div className="askForm">
+        {/*Contact us Header*/}
         <h3
           style={{
             fontSize: "60px",
@@ -126,11 +142,13 @@ export default function AskAnything() {
         </p>
 
         <form noValidate>
+          {/*Label of the input field*/}
           <label
             style={{ color: "#b3a272", fontSize: "18px", fontWeight: "100" }}
           >
             Name
           </label>
+          {/*Input field for the name*/}
           <input
             type="text"
             id="name"
@@ -144,12 +162,13 @@ export default function AskAnything() {
               setaskedBy_nameInput(value);
             }}
           />
-
+          {/*Label for the Email input field*/}
           <label
             style={{ color: "#b3a272", fontSize: "18px", fontWeight: "100" }}
           >
             Email
           </label>
+          {/*Input field for the email*/}
           <input
             type="email"
             id="email"
@@ -163,7 +182,7 @@ export default function AskAnything() {
               setaskedBy_emailInput(value);
             }}
           />
-
+          {/*Textfield with the Categories*/}
           <TextField
             id="category"
             select
@@ -185,12 +204,13 @@ export default function AskAnything() {
           </TextField>
 
           <br />
-
+          {/*Label for the quesiton text area*/}
           <label
             style={{ color: "#b3a272", fontSize: "18px", fontWeight: "100" }}
           >
             Question
           </label>
+          {/*Text area for the question*/}
           <textarea
             className="inputs-ask"
             id="subject"
@@ -205,7 +225,9 @@ export default function AskAnything() {
           />
 
           <br />
+          {/*If all information is provided sends the questions and redirects user to another page*/}
           <Link to={"/submitted"} style={{ textDecoration: "none" }}>
+            {/*Button to send the question*/}
             <button
               disabled={!isEnabled}
               onClick={() =>
@@ -232,6 +254,7 @@ export default function AskAnything() {
           <br />
         </form>
       </div>
+
       <div style={{ position: "relative", paddingBottom: "60px" }}>
         <Footer
           style={{ position: "absolute", left: "0", right: "0", bottom: "0" }}

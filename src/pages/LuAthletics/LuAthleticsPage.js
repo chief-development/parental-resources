@@ -9,7 +9,13 @@ import fball from "./LUFootball.jpg";
 import saac from "./SAAC.jpg";
 import NavLink from "./NavLink.js";
 import Footer from "./footer";
+{
+  /* Importing Footer, Component, and Images */
+}
 
+{
+  /* Styling for the root and paper*/
+}
 const styles = theme => ({
   root: {
     flexGrow: 1
@@ -27,6 +33,7 @@ function CenteredGrid(props) {
   return (
     <div className={classes.root}>
       <div>
+        {/*Main Header of the Page styling*/}
         <h1
           style={{
             //style for the header of the home page
@@ -47,17 +54,23 @@ function CenteredGrid(props) {
       </div>
 
       <hr />
+
+      {/* Hunter Stadium Photo*/}
       <img
         src={fball}
         alt="Hunter Stadium"
         style={{ width: "100%", height: "100%" }}
       />
+
+      {/*Grid Container for information with spacing 24*/}
       <Grid
         container
         spacing={24}
         style={{ display: "flex", flexWrap: "wrap" }}
       >
+        {/*Grid Item component with spacing 12*/}
         <Grid item xs={12}>
+          {/*Paper Component with styling*/}
           <Paper
             className={classes.paper}
             style={{
@@ -65,6 +78,7 @@ function CenteredGrid(props) {
               borderBottomRightRadius: "15px"
             }}
           >
+            {/*First paragraph of the Website and link the to Lindenwood Athletics Page*/}
             <p
               style={{
                 fontWeight: "300",
@@ -100,9 +114,14 @@ function CenteredGrid(props) {
           </Paper>
         </Grid>
 
+        {/* Grid Container with spacing 12*/}
         <Grid container={12} />
+
+        {/*Grid item with spacing 12 and styling */}
         <Grid item xs={12} style={{ flexWrap: "wrap" }}>
+          {/*Paper component with styling*/}
           <Paper className={classes.paper} style={{ borderRadius: "15px" }}>
+            {/*Mission Statement Header with Styling*/}
             <h3
               style={{
                 fontWeight: "400",
@@ -115,6 +134,7 @@ function CenteredGrid(props) {
             >
               Mission Statement
             </h3>
+            {/*Second Paragraph of the website, this is main static*/}
             <p
               style={{
                 fontWeight: "300",
@@ -140,8 +160,11 @@ function CenteredGrid(props) {
           </Paper>
         </Grid>
 
+        {/*Grid item with spacing 12*/}
         <Grid item xs={12}>
+          {/*Paper Component with styling*/}
           <Paper className={classes.paper} style={{ borderRadius: "15px" }}>
+            {/*Header for Student Life Sports and styling*/}
             <h3
               style={{
                 fontWeight: "400",
@@ -153,17 +176,19 @@ function CenteredGrid(props) {
             >
               Student Life Sports
             </h3>
+            {/*Third paragraph of the website and styling*/}
             <p
               style={{
                 fontWeight: "300",
                 fontSize: "18px",
-                textAlign: "left"
+                textAlign: "center"
               }}
             >
               Lindenwood also offers a variety of sports outside of the NCAA,
               most of which are among the top programs in their respective
               national and conference organizations. For information on
               Lindenwood’s Student Life Sports,{" "}
+              {/*link to Lindenwood Athletics Page "About Lindenwood Athletics" */}
               <a
                 href="https://lindenwoodlionssls.com/sports/2009/7/6/aboutLU.aspx?tab=aboutlindenwoodathletics"
                 target="_blank"
@@ -177,9 +202,14 @@ function CenteredGrid(props) {
           </Paper>
         </Grid>
 
+        {/*Grid Item Spacing 12*/}
         <Grid item xs={12}>
+          {/*Paper component with styling*/}
           <Paper className={classes.paper} style={{ borderRadius: "15px" }}>
-            <h3>Interested in being a Lindenwood Athlete?</h3>
+            {/*Header with styling*/}
+            <h3>Trying to be a new Lindenwood Lion Athlete?</h3>
+
+            {/*Last paragraph with it styling*/}
             <p
               style={{
                 fontWeight: "300",
@@ -210,7 +240,8 @@ function CenteredGrid(props) {
                 margin: "5px"
               }}
             >
-              Recruiting forms are located by{" "}
+              {/*Link to fill the Recruiting form for athletes*/}
+              Fill out our Recruiting form by{" "}
               <a href="https://lindenwoodlions.com/sb_output.aspx?form=3">
                 <span className="top-headlines">Clicking Here!</span>
               </a>
@@ -218,12 +249,16 @@ function CenteredGrid(props) {
           </Paper>
         </Grid>
 
+        {/*Grid item with spacing 12*/}
         <Grid item xs={12}>
+          {/*Paper component with styling*/}
           <Paper className={classes.paper} style={{ borderRadius: "15px" }}>
+            {/*This is my Story photo banner */}
             <img src={picture} alt="Banner" className="photo-story" />
             <h3 style={{ marginTop: "25px", marginBottom: "10px" }}>
-              Look at the Stories of our Athletes.
+              Look at out Stories of our Athletes in Lindenwood University
             </h3>
+            {/*Link to this is my story page*/}
             <a
               className="top-headlines"
               href="https://lindenwoodlions.com/sports/2018/2/8/thisismystory.aspx"
@@ -236,16 +271,14 @@ function CenteredGrid(props) {
                   fontWeight: "300"
                 }}
               >
-                Read their Stories!
+                Read Stories about our Lions!
               </p>
             </a>
           </Paper>
         </Grid>
       </Grid>
-      <Paper
-        className={classes.paper}
-        style={{ borderRadius: "15px", marginTop: "20px" }}
-      >
+      {/*Links and other options with information parents may want*/}
+      <p className="more-links">
         <h3
           style={{
             fontWeight: "400",
@@ -255,7 +288,7 @@ function CenteredGrid(props) {
             textDecoration: "underline"
           }}
         >
-          Other options
+          Other Options
         </h3>
         <NavLink to="/compliance">
           <p style={{ fontSize: "19px" }}>
@@ -273,7 +306,7 @@ function CenteredGrid(props) {
             <li> Insurance policy </li>
           </p>
         </NavLink>
-      </Paper>
+      </p>
       <br />
       <div style={{ position: "relative", paddingBottom: "60px" }}>
         <Footer

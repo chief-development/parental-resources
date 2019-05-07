@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import HomePage from "./pages/HomePage/HomePage";
 import FAQ from "./pages/FAQ/FAQ";
 import LuAthletics from "./pages/LuAthletics/LuAthleticsPage";
@@ -30,6 +29,7 @@ function App() {
     <Router>
       <Dashboard>
         <Switch>
+          {/*All Routes to every tab in the Dashboard*/}
           <Route path="/" exact component={HomePage} />
           <Route path="/athletics" component={LuAthletics} />
           <Route path="/staff" component={StaffPage} />
