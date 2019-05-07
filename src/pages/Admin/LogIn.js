@@ -44,9 +44,6 @@ export default function LogIn() {
         </h2>
         {/*Container to log in and inputs*/}
         <div class="container-login">
-          <p style={{ fontSize: "10px", fontWeight: "200" }}>
-            *Tool just for administrators of this website.
-          </p>
           {/*Label for the username input field*/}
           <label
             style={{
