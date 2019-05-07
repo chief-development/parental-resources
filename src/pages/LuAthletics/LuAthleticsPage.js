@@ -252,7 +252,10 @@ function CenteredGrid(props) {
         {/*Grid item with spacing 12*/}
         <Grid item xs={12}>
           {/*Paper component with styling*/}
-          <Paper className={classes.paper} style={{ borderRadius: "15px" }}>
+          <Paper
+            className={classes.paper}
+            style={{ borderRadius: "15px", marginBottom: "25px" }}
+          >
             {/*This is my Story photo banner */}
             <img src={picture} alt="Banner" className="photo-story" />
             <h3 style={{ marginTop: "25px", marginBottom: "10px" }}>
@@ -279,6 +282,7 @@ function CenteredGrid(props) {
       </Grid>
       {/*Links and other options with information parents may want*/}
       <p className="more-links">
+        <br />
         <h3
           style={{
             fontWeight: "400",

@@ -38,7 +38,7 @@
 
 .more-links {
   width: "100%";
-  background-color: rgba(182, 161, 107, 0.1);
+  padding: "25px";
+  background-color: rgba(182, 161, 107, 0.2);
   border-radius: 15px;
-  opacity: 0.9;
 }

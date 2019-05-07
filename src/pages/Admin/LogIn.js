@@ -162,7 +162,7 @@ function login(emailInput, passInput) {
       var errorMessage = error.message;
       // [START_EXCLUDE]
       if (errorCode === "auth/wrong-password") {
-        alert("You have inserted a wrong password");
+        alert("Wrong password");
       } else {
         alert(errorMessage);
       }
